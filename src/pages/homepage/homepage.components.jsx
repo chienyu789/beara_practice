@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Directory from '../../components/directory/directory.components';
-import MouseMove from '../../components/mousemove/mousemove.components';
+// import MouseMove from '../../components/mousemove/mousemove.components';
 
 import './homepage.styles.scss';
 import Background from '../../assets/homepagebackground.jpg';
@@ -13,7 +13,7 @@ const HomePage = () =>(
         <img src={Background} alt='homepage'/>
         <img src={SummerSales} alt='summersale'/>
         <Directory/>
-        {/* <MouseMove/> */}
+        {/* <MouseMove imgUrl={require('../../assets/homepagebackground.jpg')}/> */}
     </div>
 );
 export default HomePage;

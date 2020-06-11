@@ -8,13 +8,13 @@
     &:hover{
         // transition: 2s ease-out;
         // transform: perspective(100px) translate3d(10px, 0, 10px);
-        & .background-img{
-            opacity: 1;
+        & img{
+            opacity: 0.5;
         }
 
         & .overlay{
             display: block;
-            opacity: 0.5;
+            opacity: 1;
         }
 
         & .title{
@@ -28,13 +28,24 @@
         }
 
     }
-
-    .background-img{
-        width: 100%;
+    img{
+        width:83%;
         height: auto;
-        background-position: center;
-        background-size: cover;
+        position: absolute;
+        // background-position: center;
+        // background-size: cover;
+        z-index: 0;
     }
+    // .background-img{
+    //     img{
+    //         width:83%;
+    //         height: auto;
+    //         position: relative;
+    //         z-index: 2;
+    //         // background-position: center;
+    //         // background-size: cover;
+    //     }
+    // }
 
     .overlay{
         width:83%;
@@ -42,17 +53,21 @@
         background-color: black;
         position: absolute;
         display: none;
+        z-index: -1;
     }
 
     .text-container{
-        width: 420px;
+        width: 70%;
         height: 600px;
         border: 5px solid black;
         position: absolute;
         top: 8%;   
+        z-index: 2;
     }
     .title{
         display: none;
     }
     
 }
+
+
