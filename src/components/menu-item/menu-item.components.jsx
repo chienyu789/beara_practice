@@ -24,8 +24,13 @@ const MenuItem = ({title, imgUrl}) =>{
     const onMouseMove = ( e ) => (
         setpositionState({x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY})
     );
+    const styles = { 
+        transform: `translate(${positionState.x*0.1}px, ${positionState.y*0.2}px)` 
+        
+      };
+  
     return (
-        <div className='menu-item' onMouseMove={onMouseMove}>
+        <div className='menu-item' onMouseMove={onMouseMove} style={styles}>
             {/* <div className='overlay'/> */}
             <ImgMove imgUrl={imgUrl} x={positionState.x} y={positionState.y}/>       
             <div className='text-container'>
