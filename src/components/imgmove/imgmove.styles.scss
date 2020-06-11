@@ -1,0 +1,14 @@
+.overlay{
+    width:200px;
+    height:600px;
+    background-color: black;
+    position: absolute;
+    display: none;
+        &:hover {
+            display: block;
+            opacity: 1;
+        }
+}
+.span{
+    color:red;
+}
