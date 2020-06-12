@@ -5,7 +5,7 @@ import './imgmove.styles.scss';
 const ImgMove = ({title, imgUrl, x, y}) =>{
     const styles = { 
       transition: `transform .3s ease-in-out`,
-      transform: `translate(${x*0.1}px, ${y*0.2}px)` 
+      transform: `translate(${x*0.1}px, ${y*0.2}px)` ,
     };
         return(
         <div className='move' style={styles}>

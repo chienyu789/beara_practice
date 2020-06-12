@@ -12,21 +12,21 @@ class Blogcategory extends React.Component{
             sections:[
                 {
                     id: 1,
-                    title: 'backpacks',
-                    imgUrl: require('../../assets/backpacks.jpg'),
-                    linkUrl:'categorys/backpacks'
+                    title: 'bracelets-blog',
+                    imgUrl: require('../../assets/bracelets.jpg'),
+                    linkUrl:'blog/bracelet'
                 },
                 {
                     id: 2,
-                    title: 'handbags',
-                    imgUrl: require('../../assets/handbags.jpg'),
-                    linkUrl:'handbags/backpacks'
+                    title: 'phoenix-blog',
+                    imgUrl: require('../../assets/phoenix.jpg'),
+                    linkUrl:'blog/phoenix'
                 },
                 {
                     id: 3,
-                    title: 'stachels',
-                    imgUrl: require('../../assets/stachels.jpg'),
-                    linkUrl:'stachels/backpacks'
+                    title: 'love&hope-blog',
+                    imgUrl: require('../../assets/loveandhope.jpg'),
+                    linkUrl:'blog/loveandhope'
                 }
             ]
         }
