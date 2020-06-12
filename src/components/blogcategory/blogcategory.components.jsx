@@ -2,10 +2,9 @@ import React from 'react';
 
 import MenuItem from '../menu-item/menu-item.components';
 
-import './directory.styles.scss';
+import './blogcategory.styles.scss';
 
-
-class Directory extends React.Component{
+class Blogcategory extends React.Component{
     constructor(){
         super();
 
@@ -34,7 +33,7 @@ class Directory extends React.Component{
     }
     render(){
         return(
-            <div className='directory'>
+            <div className='blog'>
                 { this.state.sections.map(({ id, title, imgUrl, linkUrl }) => (
                 <MenuItem key={id} title={title} imgUrl={imgUrl} linkUrl={linkUrl}/>))}
             </div>
@@ -42,4 +41,4 @@ class Directory extends React.Component{
     }
 };
 
-export default Directory;
+export default Blogcategory;

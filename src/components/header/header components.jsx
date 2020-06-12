@@ -6,7 +6,7 @@ import './header.styles.scss';
 const Header = () => (
     <div className='header'>
         <h1 className='languageselect'>UK|中國</h1>
-        <Link className='options' to='/bags'>
+        <Link className='options' to='/categorys'>
             BAGS
         </Link>
         <Link className='options' to='/customise'>

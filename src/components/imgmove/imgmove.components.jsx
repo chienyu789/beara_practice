@@ -2,21 +2,16 @@ import React from 'react';
 
 import './imgmove.styles.scss';
 
-const ImgMove = ({imgUrl, x, y}) =>{
-    // const [ positionState, setpositionState ] = useState({ x: 0, y: 0});
-
-    // const onMouseMove = ( e ) => (
-    //     setpositionState({x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY})
-    // );
+const ImgMove = ({title, imgUrl, x, y}) =>{
     const styles = { 
+      transition: `transform .3s ease-in-out`,
       transform: `translate(${x*0.1}px, ${y*0.2}px)` 
     };
         return(
-        <div style={styles}>
+        <div className='move' style={styles}>
           <img src={imgUrl} alt='test'/>
           <div className='overlay'/>
-          {/* <span>{x}</span>
-          <span>{y}</span> */}
+          <span className='title'>{title.toUpperCase()}</span>
         </div>
         
   
