@@ -6,7 +6,7 @@ import TextContainer from '../text-container/text-container.components';
 
 import './menu-item.styles.scss';
 
-const MenuItem = ({title, imgUrl, history , linkUrl , match}) =>{
+const MenuItem = ({title, subtitle, imgUrl, history , linkUrl , match}) =>{
     const [ positionState, setpositionState ] = useState({ x: 0, y: 0, active: false});
 
     const onMouseMove = ( e ) => (
@@ -22,7 +22,7 @@ const MenuItem = ({title, imgUrl, history , linkUrl , match}) =>{
           onMouseOut={onMouseLeve}
           onClick={()=>history.push(`${match.url}${linkUrl}`)}
           >
-            <ImgMove title={title} imgUrl={imgUrl} x={positionState.x} y={positionState.y}/>
+            <ImgMove title={title} subtitle={subtitle} imgUrl={imgUrl} x={positionState.x} y={positionState.y}/>
             <TextContainer x={positionState.x} y={positionState.y}/>
         </div>
           )    

@@ -1,0 +1,92 @@
+.footer{
+    display: block;
+    padding-bottom: 100px;
+    .footer-bar{
+    height: 150px;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    overflow-x: hidden;
+    .marquee{
+        display: flex;
+        align-items: center;
+        height:100%;
+        position: absolute;
+        transform: translateX(-100%);
+        animation: marquee 10s linear infinite;
+        img{
+            height:80%;
+            width:auto;  
+        }
+        p{
+            color: white;
+            font-size: 24px;
+            padding:20px;
+        }
+    }
+    
+    @keyframes marquee {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(550%);
+        }
+    }
+    }
+    .footer-detail{
+        display:flex;
+        padding:50px 120px ;
+        justify-content: space-around;
+        span{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .aboutus{
+            display: block;
+            width:25%;
+            text-align: center;
+            
+            .link{
+                display: block;
+                text-decoration: solid;
+                color: grey;
+                font-size:20px;
+            }
+        }
+        .news{
+            display: block;
+            .newsmail{
+                display: flex;
+                align-items: center;
+                input{
+                    border-image: initial;
+                    border-style: solid;
+                    border-color: black;
+                    font-size: 15px;
+                    width: 250px;
+                    height:40px;
+                }
+                input[type="submit"]{
+                    color:white;
+                    outline: none;
+                    font-size: 15px;
+                    background-color: black;
+                    width:100px;
+                    height:40px;
+                    box-sizing: content-box;
+                    cursor: pointer;
+                }
+            }
+        }
+        .social-media {
+            display: flex;
+            justify-content: center;
+            img{
+                height: 48px;
+                width: 48px;
+                padding: 25px;
+            }    
+          }
+    }   
+}
