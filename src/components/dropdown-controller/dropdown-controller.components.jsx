@@ -5,24 +5,16 @@ import DropdownList from '../dropdown-list/dropdown-list.components';
 
 import './dropdown-controller.styles.scss';
 
-const DropdownNavbar = () => {
-    const [ showState, setshowState ] = useState(false);
-
-    const ShowNavbar = () =>(
-        setshowState(true)
-    );
-    const HideNavbar = () =>(
-        setshowState(true)
-    );
-
-    return (
-        <div onMouseOver={ShowNavbar} onMouseLeave={HideNavbar} className='dropdown'>
-            <Link to='/store'>
-            OUR STORE
-            </Link>
-            <DropdownList show={showState}/>
+const DropdownNavbar = ({ show }) => (
+    <div className='dropdown'>
+        <Link className='title' to='/store'>
+        OUR STORE
+        </Link>
+        <div className='subtitle'>
+            <DropdownList show={show}/>
         </div>
-    )
-};
+    </div>
+    
+);
 
 export default DropdownNavbar;

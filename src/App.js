@@ -4,7 +4,7 @@ import { Route} from 'react-router-dom';
 import HomePage from './pages/homepage/homepage.components';
 import ShopPage from './pages/shoppage/shoppage.components';
 
-import Header from './components/header/header components';
+import Header from './components/header/header.components';
 import Footer from './components/footer/footer.components';
 
 import './App.css';

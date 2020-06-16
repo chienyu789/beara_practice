@@ -6,13 +6,14 @@
     background-color: black;
     opacity:0.5;
     position: fixed;
-    top: 0;
+    top: 200px;
+    
     z-index: 2;
     .languageselect{
         width: 100px;
         display: flex;
         padding-left: 10px;
-        font-size: 120%;
+        font-size: 20px;
         color: white;
         align-items: center;
         white-space:nowrap;
@@ -25,8 +26,23 @@
         justify-content: center;
         color: white;
         text-decoration: none;
-        font-size: 120%;
-        white-space:nowrap
+        font-size: 20px;
+        white-space:nowrap;
     }
 
+
+}
+.dropdown{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .title{
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        white-space:nowrap;
+    }
 }
