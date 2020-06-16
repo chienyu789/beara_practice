@@ -1,6 +1,7 @@
 import React from 'react';
 
 import DropdownList from '../dropdown-list/dropdown-list.components';
+import './dropdownstore.styles.scss';
 
 
 class DropDownStore extends React.Component{
