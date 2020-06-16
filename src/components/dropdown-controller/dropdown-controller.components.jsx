@@ -16,7 +16,7 @@ const DropdownNavbar = () => {
     );
 
     return (
-        <div onMouseOver={ShowNavbar} onMouseLeave={HideNavbar}>
+        <div onMouseOver={ShowNavbar} onMouseLeave={HideNavbar} className='dropdown'>
             <Link to='/store'>
             OUR STORE
             </Link>
