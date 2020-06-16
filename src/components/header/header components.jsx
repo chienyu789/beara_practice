@@ -28,7 +28,9 @@ const Header = () => (
                 Shanghai Store
             </NavLink>
         </div> */}
+        <div className='options'>
         <DropdownNavbar/>
+        </div>
         <Link className='options' to='/story'>
             OUR STORIES
         </Link>

@@ -1,12 +1,14 @@
 .navlink{
-    width: 50%;
+    width: 150%;
     height: 100%;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     color: white;
     text-decoration: none;
     font-size: 120%;
+    background-color: black;
+    opacity:0.5;
     &:hover{
         text-decoration: underline;
     }

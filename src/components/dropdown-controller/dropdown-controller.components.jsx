@@ -12,12 +12,12 @@ const DropdownNavbar = () => {
         setshowState(true)
     );
     const HideNavbar = () =>(
-        setshowState(false)
+        setshowState(true)
     );
 
     return (
-        <div>
-            <Link onMouseOver={ShowNavbar} onMouseLeave={HideNavbar} className='options' to='/store'>
+        <div onMouseOver={ShowNavbar} onMouseLeave={HideNavbar}>
+            <Link to='/store'>
             OUR STORE
             </Link>
             <DropdownList show={showState}/>
