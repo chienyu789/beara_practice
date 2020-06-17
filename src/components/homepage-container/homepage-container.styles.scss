@@ -1,0 +1,15 @@
+.position{
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    top:50%;
+    left:42%;
+    .logo{
+        width:400px;
+        height:auto;
+    
+        path{
+            fill:white;
+        }
+    }
+}

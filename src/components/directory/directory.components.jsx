@@ -15,19 +15,19 @@ class Directory extends React.Component{
                     id: 1,
                     title: 'backpacks',
                     imgUrl: require('../../assets/backpacks.jpg'),
-                    linkUrl:'categorys/backpacks'
+                    linkUrl:'category/backpacks'
                 },
                 {
                     id: 2,
                     title: 'handbags',
                     imgUrl: require('../../assets/handbags.jpg'),
-                    linkUrl:'handbags/backpacks'
+                    linkUrl:'category/handbags'
                 },
                 {
                     id: 3,
                     title: 'stachels',
                     imgUrl: require('../../assets/stachels.jpg'),
-                    linkUrl:'stachels/backpacks'
+                    linkUrl:'category/stachels'
                 }
             ]
         }

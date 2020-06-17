@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import DropDownBag from '../dropdownbags/dropdownbags.components';
 import DropDownStore from '../dropdownstore/dropdownstore.components';
 
+import  { ReactComponent as Logo }  from '../../assets/logo.svg';
+
 import './header.styles.scss';
 
 const Header = () => {
@@ -23,12 +25,12 @@ const Header = () => {
     const HideNavbar = () =>(
         setshowState(false)
     );
-    console.log(showState);
+
     return(
     <div className='header'>
         <h1 className='languageselect'>UK|中國</h1>
         <div className='dropdown' onMouseOver={ShowBagbar} onMouseLeave={HideBagbar} >
-            <Link className='options' to='/category'>
+            <Link className='options' to='/category/all-products'>
                 BAGS
             </Link>
             {
@@ -41,7 +43,7 @@ const Header = () => {
             CUSTOMISE
         </Link>
         <Link className='options' to='/'>
-            Beara
+            <Logo className='logo'/>
         </Link>
         <div className='dropdown' onMouseOver={ShowNavbar} onMouseLeave={HideNavbar} >
             <Link className='title' to='/store'>

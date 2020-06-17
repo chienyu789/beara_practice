@@ -8,6 +8,7 @@ import PinterestIcon from '../../assets/pinterest.svg';
 import InstagramIcon from '../../assets/instagram.svg';
 import WeiboIcon from '../../assets/weibo.svg';
 
+
 import './footer.styles.scss';
 
 const Footer = () => (
