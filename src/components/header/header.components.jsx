@@ -55,8 +55,8 @@ const Header = () => {
                 null
             }
         </div>
-        <Link className='options' to='/story'>
-            OUR STORIES
+        <Link className='options' to='/our-story'>
+            OUR STORY
         </Link>
     </div>
 )};

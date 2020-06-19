@@ -15,7 +15,7 @@ const HomePage = () =>{
 
     const ScrollHandler =()=>{
         setscrollState({position: window.scrollY})
-        if( scrollState.position>250 ){
+        if( scrollState.position>200 ){
             setshowState(false)
         }else{
             setshowState(true)
