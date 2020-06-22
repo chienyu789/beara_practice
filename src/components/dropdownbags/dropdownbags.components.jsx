@@ -63,9 +63,6 @@ class DropDownBags extends React.Component{
     render(){
         return(
             <div className='bag'>
-                {/* <form>
-                    <input type='text'/>
-                </form> */}
                 {this.state.bags.map(({ id, subtitle, linkUrl }) => (
                 <DropdownList key={id} subtitle={subtitle} linkUrl={linkUrl}/>))}
             </div>
