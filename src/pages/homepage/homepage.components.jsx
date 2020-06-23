@@ -26,8 +26,6 @@ const HomePage = () =>{
         window.addEventListener('scroll',ScrollHandler)
         return () => window.removeEventListener('scroll',ScrollHandler)
         });
-        console.log(scrollState.position);
-        console.log(showState);
 
     return(
     <div>

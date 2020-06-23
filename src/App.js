@@ -22,7 +22,7 @@ function App() {
       <Route path='/london-store' component={LondonStore}/>
       <Route path='/shanghai-store' component={ShanghaiStore}/>
       <Route path='/our-story' component={StoryPage}/>
-      <Route path='/category/all-products' component={ShopPage}/>
+      <Route path='/category' component={ShopPage}/>
 
       <Footer/>
     </div>
