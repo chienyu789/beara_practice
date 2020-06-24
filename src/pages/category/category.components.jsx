@@ -1,32 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Route } from 'react-router-dom';
 
 import { selectCategory } from '../../redux/shop/shop.selector';
 
+import CategoryPage from '../../components/categorypage/categorypage.components';
+import ProductPage from '../productpage/productpage.components';
+
 import './category.styles.scss';
 
-const Category = ({ category }) =>{
-    if ( category === undefined ){
-        return null
-    }else{
-    const { title, items } = category;
-    return(
-    <div>
-        <span>{title}</span>
-        {
-            items.map((item) =>
-            <div key={item.id}  className='collectionitem'>
-            <Link to={item.linkUrl}>
-            <img src={ item.imgUrl } alt={ item.name }/>
-            </Link>
-            <span>{ item.name }</span>
-            <span>{ item.price }</span>
+const Category = ({ match })=>{
+    console.log(match);
+    return( 
+            <div className='products'>
+                <Route exact path={`${match.path}`} component={CategoryPage}/>
+                <Route path={`${match.path}/:productId`} component={ProductPage}/>
             </div>
-                )
-         }
-    </div>
-)}};
+        )}
 
 const mapStateToProps = ( state, ownProps ) =>({
     category: selectCategory(ownProps.match.params.categoryId)(state)
