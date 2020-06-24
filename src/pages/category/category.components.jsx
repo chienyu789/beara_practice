@@ -19,7 +19,7 @@ const Category = ({ match })=>{
         )}
 
 const mapStateToProps = ( state, ownProps ) =>({
-    category: selectCategory(ownProps.match.params.categoryId)(state)
+    category: selectCategory(ownProps.match.params.categoryId)(state),
 })
 
 export default connect(mapStateToProps)(Category);
