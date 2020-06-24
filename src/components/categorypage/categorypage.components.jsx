@@ -6,6 +6,7 @@ import { selectCategory } from '../../redux/shop/shop.selector';
 import './categorypage.styles.scss';
 
 const CategoryPage = ({ category }) =>{
+    console.log(category);
 
     if ( category === undefined ){
         return null

@@ -27,8 +27,8 @@ export const selectCategory = categoryUrlParams =>createSelector(
     collections => collections[categoryUrlParams]
 );
 
-export const selectProduct = productUrlParams =>createSelector(
-    [selectCategory],
-    items => items[productUrlParams]
-    // items => items.find(item => item.id === productUrlParams )
+export const selectProduct = (categoryUrlParams, productUrlParams) =>createSelector(
+    [selectCategory(categoryUrlParams)],
+    // items => items[productUrlParams]
+    items => items.items.find(item => item.id === productUrlParams )
 );
