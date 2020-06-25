@@ -5,45 +5,45 @@ const SHOP_DATA = {
         routeName: 'backpacks',
         items: [
             {
-                id: '101',
+                id: 'yoyo-black',
                 name: 'YOYO BLACK',
                 imgUrl: require('../../assets/yoyo-black.jpg'),
-                linkUrl:'/category/backpacks/101',
+                linkUrl:'/category/backpacks/yoyo-black',
                 price: 135
               },
             {
-                id: '102',
+                id: 'yoyo-brown',
                 name: 'YOYO BROWN',
                 imgUrl: require('../../assets/yoyo-brown.jpg'),
-                linkUrl:'/category/backpacks/102',
+                linkUrl:'/category/backpacks/yoyo-brown',
                 price: 135
               },
             {
-                id: '103',
+                id: 'eva-black',
                 name: 'EVA BLACK',
                 imgUrl: require('../../assets/eva-black.jpg'),
-                linkUrl:'/category/backpacks/103',
+                linkUrl:'/category/backpacks/eva-black',
                 price: 135
               },
             {
-                id: '104',
+                id: 'eva-brown',
                 name: 'EVA BROWN',
                 imgUrl: require('../../assets/eva-brown.jpg'),
-                linkUrl:'/category/backpacks/104',
+                linkUrl:'/category/backpacks/eva-brown',
                 price: 135
               },
             {
-                id: '105',
+                id: 'frida-bp',
                 name: 'FRIDA-BACKPACK',
                 imgUrl: require('../../assets/frida-bp.jpg'),
-                linkUrl:'/category/backpacks/105',
+                linkUrl:'/category/backpacks/frida-bp',
                 price: 140
               },
             {
-                id: '106',
+                id: 'lila',
                 name: 'LILA',
                 imgUrl: require('../../assets/lila.jpg'),
-                linkUrl:'/category/backpacks/106',
+                linkUrl:'/category/backpacks/lila',
                 price: 150
               }
         ]
@@ -54,45 +54,45 @@ const SHOP_DATA = {
         routeName: 'stachels',
         items: [
             {
-                id: '201',
+                id: 'will-satchel-s',
                 name: 'WILL SATCHEL SMALL',
                 imgUrl: require('../../assets/will-satchel-s.jpg'),
-                linkUrl:'/category/stachels/201',
+                linkUrl:'/category/stachels/will-satchel-s',
                 price: 180
               },
             {
-                id: '202',
+                id: 'will-satchel-m',
                 name: 'WILL SATCHEL MEDIUM',
                 imgUrl: require('../../assets/will-satchel-m.jpg'),
-                linkUrl:'/category/stachels/202',
+                linkUrl:'/category/stachels/will-satchel-m',
                 price: 220
                 },
             {
-                id: '203',
+                id: 'will-satchel-l',
                 name: 'WILL SATCHEL LARGE',
                 imgUrl: require('../../assets/will-satchel-l.jpg'),
-                linkUrl:'/category/stachels/203',
+                linkUrl:'/category/stachels/will-satchel-l',
                 price: 280
                 },
             {
-                id: '204',
+                id: 'santa-anna-xs',
                 name: 'SANTA ANNA EXTRA SMALL',
                 imgUrl: require('../../assets/santa-anna-xs.jpg'),
-                linkUrl:'/category/stachels/204',
+                linkUrl:'/category/stachels/santa-anna-xs',
                 price: 145
                 },
             {
-                id: '205',
+                id: 'santa-anna-s',
                 name: 'SANTA ANNA SMALL',
                 imgUrl: require('../../assets/santa-anna-s.jpg'),
-                linkUrl:'/category/stachels/205',
+                linkUrl:'/category/stachels/santa-anna-s',
                 price: 155
                 },
             {
-                id: '206',
+                id: 'santa-anna-m',
                 name: 'SANTA ANNA MEDIUM',
                 imgUrl: require('../../assets/santa-anna-m.jpg'),
-                linkUrl:'/category/stachels/206',
+                linkUrl:'/category/stachels/santa-anna-m',
                 price: 165
                 },
         ]
@@ -103,17 +103,17 @@ const SHOP_DATA = {
         routeName: 'handbags',
         items: [
             {
-                id: '301',
+                id: 'alex-hb-brn',
                 name: 'ALEX HANDBAG BROWN',
                 imgUrl: require('../../assets/alex-hb-brn.jpg'),
-                linkUrl:'/category/handbags/301',
+                linkUrl:'/category/handbags/alex-hb-brn',
                 price: 130
                 },
             {
-                id: '302',
+                id: 'alex-black',
                 name: 'ALEX HANDBAG BLACK',
                 imgUrl: require('../../assets/alex-black.jpg'),
-                linkUrl:'/category/handbags/302',
+                linkUrl:'/category/handbags/alex-black',
                 price: 130
                 }
         ]

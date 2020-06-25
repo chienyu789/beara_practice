@@ -1,14 +1,17 @@
 import React,{ useState } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import DropDownBag from '../dropdownbags/dropdownbags.components';
 import DropDownStore from '../dropdownstore/dropdownstore.components';
+import CartIcon from '../cart-icon/cart-icon.components';
+import CartNav from '../cart-nav/cart-nav.components';
 
 import  { ReactComponent as Logo }  from '../../assets/logo.svg';
 
 import './header.styles.scss';
 
-const Header = () => {
+const Header = ({hidden}) => {
     const [ showbagState, setshowbagState ] = useState(false);
     const [ showState, setshowState ] = useState(false);
     
@@ -27,6 +30,7 @@ const Header = () => {
     );
 
     return(
+    <div>
     <div className='header'>
         <h1 className='languageselect'>UK|中國</h1>
         <div className='dropdown' onMouseOver={ShowBagbar} onMouseLeave={HideBagbar} >
@@ -46,7 +50,7 @@ const Header = () => {
             <Logo className='logo'/>
         </Link>
         <div className='dropdown' onMouseOver={ShowNavbar} onMouseLeave={HideNavbar} >
-            <Link className='title' to='/store'>
+            <Link className='title' to='/london-store'>
             OUR STORE
             </Link>
             {
@@ -58,7 +62,18 @@ const Header = () => {
         <Link className='options' to='/our-story'>
             OUR STORY
         </Link>
+        <CartIcon className='carticon'/>
+    </div>
+    {
+        hidden?
+        <CartNav/>:
+        null
+    }
     </div>
 )};
 
-export default Header;
+const mapStateToProps = ({cart:{ hidden }}) =>({
+    hidden
+})
+
+export default connect(mapStateToProps)(Header);
