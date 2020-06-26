@@ -9,16 +9,18 @@ const ProductPage = ({ product, match, addProduct }) =>{
     console.log(product);
     const { id, name, imgUrl, price } = product;
     return(
-        <div>
-    <div key={ id }>
-        <img src={imgUrl} alt={id}/>
-        <span>{ name }</span>
-        <span>{ price }</span>
-    </div>
-    <button>GIFT WRAPPING</button>
-    <button>EMBOSSING</button>
-    <button onClick={()=>addProduct(product)}>ADD TO CART</button>
-    </div>
+        <div className='product-page'>
+            <div className='product-detail' key={ id }>
+                <img src={imgUrl} alt={id}/>
+                <span className='product-name'>{ name }</span>
+                <span className='product-price'>{ price }</span>
+            </div>
+            <div className='selectbutton'>
+            <button className='customisebutton'>GIFT WRAPPING</button>
+            <button className='customisebutton'>EMBOSSING</button>
+            <button className='addbutton' onClick={()=>addProduct(product)}>ADD TO CART</button>
+            </div>
+        </div>
 )};
 
 const mapStateToProps = ( state, ownProps ) =>({

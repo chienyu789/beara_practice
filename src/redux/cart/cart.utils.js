@@ -1,5 +1,4 @@
 export const addProductToCart = ( cartProducts, cartProductToAdd ) =>{
-    console.log(cartProducts);
     const existingCartItem = cartProducts.find(
         cartProduct => cartProduct.id === cartProductToAdd.id
     );
@@ -13,3 +12,17 @@ export const addProductToCart = ( cartProducts, cartProductToAdd ) =>{
 
     return [...cartProducts, {...cartProductToAdd, quantity:1}]
 };
+
+export const removeProductToCart = ( cartProducts, cartProductToRemove ) =>{
+    const existingCartItem = cartProducts.find(
+        cartProduct => cartProduct.id === cartProductToRemove.id
+    );
+    if(existingCartItem.quantity===1){
+        return cartProducts.filter(cartProduct => cartProduct.id !== cartProductToRemove.id)
+    }
+    return cartProducts.map(
+        cartProduct => cartProduct.id === cartProductToRemove.id?
+         {...cartProduct, quantity: cartProduct.quantity-1}:
+          cartProduct
+        );
+}

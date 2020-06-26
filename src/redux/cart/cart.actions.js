@@ -14,6 +14,6 @@ export const addProduct = product =>({
 });
 
 export const removeProduct = product =>({
-    type:CartActionTypes.REMOVE_ITEM,
+    type:CartActionTypes.REMOVE_PRODUCT,
     payload: product
 });

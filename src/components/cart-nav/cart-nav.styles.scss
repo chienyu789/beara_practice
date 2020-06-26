@@ -1,6 +1,6 @@
 .cartnav{
     height: 100%; 
-    width: 260px; 
+    width: 360px; 
     position: fixed; 
     z-index: 4; 
     top: 0; 
@@ -8,4 +8,10 @@
     background-color: lightgray; 
     overflow-x: hidden; 
     padding-top: 20px;
+
+    .cartitems{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

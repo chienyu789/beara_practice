@@ -1,0 +1,26 @@
+.cart-product{
+    width: 100%;
+    height:120px;
+    border-bottom: solid saddlebrown;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    img{
+        height: 60px;
+        width: 60px;
+        margin: 5px;
+    }
+    span{
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        align-items: flex-start;
+        margin: 5px;
+    }
+    .remove{
+        color:red;
+        align-items: flex-end;
+        margin: 5px;
+    }
+}
