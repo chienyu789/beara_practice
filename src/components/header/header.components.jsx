@@ -62,7 +62,9 @@ const Header = ({hidden}) => {
         <Link className='options' to='/our-story'>
             OUR STORY
         </Link>
-        <CartIcon className='carticon'/>
+        <div className='carticon'>
+            <CartIcon/>
+        </div>
     </div>
     {
         hidden?

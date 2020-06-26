@@ -9,7 +9,7 @@ import './cart-nav.styles.scss';
 
 const CartNav = ({hideCart, cartProducts}) =>(
     <div className='cartnav'>
-        <div onClick={hideCart}>&#10005;</div>
+        <div className='close' onClick={hideCart}>&#10005;</div>
         <div className='cartitems'>
             {
                 cartProducts.map(cartProduct=>(
@@ -17,11 +17,13 @@ const CartNav = ({hideCart, cartProducts}) =>(
                 ))
             }
         </div>
+        <div className='discountcode'>
         <form>
             <input type='text' placeholder='Discount Code'/>
             <input type='submit' value='Apply'/>
         </form>
-        <button>CHECK OUT<span>2</span></button>
+        </div>
+        <button className='checkout'>CHECK OUT<span>2</span></button>
     </div>
 );
 const mapStateToProps = ({cart: { cartProducts }}) =>({

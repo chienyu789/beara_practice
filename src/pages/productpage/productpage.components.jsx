@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { selectProduct } from '../../redux/shop/shop.selector';
 import { addProduct } from '../../redux/cart/cart.actions';
 
+
 import './productpage.styles.scss';
 
 const ProductPage = ({ product, match, addProduct }) =>{
