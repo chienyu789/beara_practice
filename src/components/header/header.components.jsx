@@ -11,7 +11,7 @@ import  { ReactComponent as Logo }  from '../../assets/logo.svg';
 
 import './header.styles.scss';
 
-const Header = ({hidden}) => {
+const Header = ({hidden, count}) => {
     const [ showbagState, setshowbagState ] = useState(false);
     const [ showState, setshowState ] = useState(false);
     
@@ -63,7 +63,11 @@ const Header = ({hidden}) => {
             OUR STORY
         </Link>
         <div className='carticon'>
-            <CartIcon/>
+            {
+                count>=1?
+                <CartIcon/>:
+                null
+            }
         </div>
     </div>
     {
@@ -74,8 +78,9 @@ const Header = ({hidden}) => {
     </div>
 )};
 
-const mapStateToProps = ({cart:{ hidden }}) =>({
-    hidden
+const mapStateToProps = ({cart:{ hidden, cartProducts}}) =>({
+    hidden,
+    count: cartProducts.reduce((accumulated, cartPtoduct) => accumulated + cartPtoduct.quantity, 0)
 })
 
 export default connect(mapStateToProps)(Header);

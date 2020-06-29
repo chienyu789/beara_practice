@@ -13,7 +13,7 @@ const CartNav = ({hideCart, cartProducts}) =>(
         <div className='cartitems'>
             {
                 cartProducts.map(cartProduct=>(
-                <CartProduct key={ cartProduct.id } cartProduct={cartProduct}/>
+                <CartProduct key={ cartProduct.timestamp } cartProduct={cartProduct}/>
                 ))
             }
         </div>
