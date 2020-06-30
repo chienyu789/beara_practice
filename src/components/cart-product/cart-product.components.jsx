@@ -12,7 +12,7 @@ const CartProduct = ({cartProduct, removeProduct}) => {
         <img src={imgUrl} alt={title}/>
         <div>
         <span>{name}</span>
-        <span>{price}</span>
+        <span>£ {price}</span>
         </div>
         <div className='remove' onClick={()=>removeProduct(cartProduct)}>&#10005;</div>
     </div>

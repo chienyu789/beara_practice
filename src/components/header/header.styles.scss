@@ -39,9 +39,9 @@
         }
     }
     .carticon{
-        display: inline-flex;
+        display: flex;
         z-index: 3;
-        align-items: center;
+        align-items:center;
         justify-content: center;
         height:70px;
     }

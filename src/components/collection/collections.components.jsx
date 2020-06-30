@@ -17,7 +17,7 @@ const CollectionPage = ({ collections }) => (
             <img src={ item.imgUrl } alt={ item.name }/>
             </Link>
             <span>{ item.name }</span>
-            <span>{ item.price }</span>
+            <span>£{ item.price }</span>
             </div>
                 ))
          }

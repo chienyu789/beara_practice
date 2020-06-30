@@ -1,0 +1,41 @@
+.checkout-page{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height:auto;
+    background-color:rgb(242, 242, 242);
+    .shipping-detail{
+        margin-top: 120px;
+        width:500px;
+        height: 600px;
+        background-color: white;
+        color: rgb(24, 32, 38);
+    }
+}
+.checkout-detail{
+    margin-top: 120px;
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    .finaltotal{
+        text-align: right;
+    }
+    .checkout-item{
+        display: flex;
+        margin: 10px;
+        img{
+            width:120px;
+            height:auto;
+            outline: none;
+            border: none;
+            display: block;
+            mix-blend-mode:multiply;
+        }
+        span{
+            display: inline-flex;
+            align-items: center;
+        }
+    }
+
+}

@@ -1,13 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import { hideCart } from '../../redux/cart/cart.actions';
+import { selectCartTotal } from '../../redux/cart/cart.selector';
 
 import CartProduct from '../cart-product/cart-product.components';
 
 import './cart-nav.styles.scss';
 
-const CartNav = ({hideCart, cartProducts}) =>(
+const CartNav = ({hideCart, cartProducts, total, history}) =>(
     <div className='cartnav'>
         <div className='close' onClick={hideCart}>&#10005;</div>
         <div className='cartitems'>
@@ -23,15 +25,18 @@ const CartNav = ({hideCart, cartProducts}) =>(
             <input type='submit' value='Apply'/>
         </form>
         </div>
-        <button className='checkout'>CHECK OUT<span>2</span></button>
+        <button className='checkout'onClick={()=>{
+            history.push('/checkout')
+            }}>CHECK OUT<span> £{total}</span></button>
     </div>
 );
-const mapStateToProps = ({cart: { cartProducts }}) =>({
-    cartProducts
+const mapStateToProps = (state) =>({
+    cartProducts: state.cart.cartProducts,
+    total: selectCartTotal(state)
 });
 
 const mapDispatchToProps = dispatch =>({
     hideCart: () => dispatch(hideCart())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CartNav);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartNav));

@@ -10,7 +10,6 @@ import ProductPage from '../productpage/productpage.components';
 import './category.styles.scss';
 
 const Category = ({ match })=>{
-    console.log(match);
     return( 
             <div className='products'>
                 <Route exact path={`${match.path}`} component={CategoryPage}/>

@@ -1,6 +1,7 @@
 import React,{ useState } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { selectCartCount } from '../../redux/cart/cart.selector';
 
 import DropDownBag from '../dropdownbags/dropdownbags.components';
 import DropDownStore from '../dropdownstore/dropdownstore.components';
@@ -78,9 +79,9 @@ const Header = ({hidden, count}) => {
     </div>
 )};
 
-const mapStateToProps = ({cart:{ hidden, cartProducts}}) =>({
-    hidden,
-    count: cartProducts.reduce((accumulated, cartPtoduct) => accumulated + cartPtoduct.quantity, 0)
+const mapStateToProps = (state) =>({
+    hidden: state.cart.hidden,
+    count: selectCartCount(state)
 })
 
 export default connect(mapStateToProps)(Header);

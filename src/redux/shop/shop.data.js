@@ -3,6 +3,7 @@ const SHOP_DATA = {
         id: 1,
         title: 'BACKPACKS',
         routeName: 'backpacks',
+        videoUrl:'https://player.vimeo.com/video/369048834?background=1&autoplay=1&loop=1&byline=0&title=0',
         items: [
             {
                 id:101,
@@ -58,6 +59,7 @@ const SHOP_DATA = {
         id: 2,
         title: 'STACHELS',
         routeName: 'stachels',
+        videoUrl:'https://player.vimeo.com/video/369045160?background=1&autoplay=1&loop=1&byline=0&title=0',
         items: [
             {
                 id:201,
@@ -113,6 +115,7 @@ const SHOP_DATA = {
         id: 3,
         title: 'HANDBAGS',
         routeName: 'handbags',
+        videoUrl:'https://player.vimeo.com/video/369042184?background=1&autoplay=1&loop=1&byline=0&title=0',
         items: [
             {
                 id:301,
@@ -136,12 +139,14 @@ const SHOP_DATA = {
         id: 4,
         title: 'MENS',
         routeName: 'mens',
+        videoUrl:'https://player.vimeo.com/video/369040833?background=1&autoplay=1&loop=1&byline=0&title=0',
         items: []
     },
     laptopcases:{
         id: 5,
         title: 'LAPTOP CASES',
         routeName: 'laptopcases',
+        videoUrl:'https://player.vimeo.com/video/369038198?background=1&autoplay=1&loop=1&byline=0&title=0',
         items: []
     },
     wallets:{
