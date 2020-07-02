@@ -1,62 +1,76 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+import { addProduct } from '../../redux/cart/cart.actions';
 
 import './customise-button.styles.scss';
 import { useState } from 'react';
 
-const CustomiseButton = ({closeClick}) => {
-    const [ customiseState, setcustomiseState ] = useState({ currentstring:'', string:'' });
+const CustomiseButton = ({ closeClick, product, addProduct}) => {
+    const { id, name, imgUrl, price } = product;
+    const [ customiseState, setcustomiseState ] = useState('');
+    const [ fontState, setfontState ] = useState('');
+    const [ positionState, setpositionState ] = useState('');
+    const [ colourState, setcolourState ] = useState('');
+    const customise = { id: id, name: name, imgUrl: imgUrl, price: price, emboseprice: 15, text: customiseState, font: fontState, colour: colourState, position: positionState };
 
     const customiseChange = (e) =>{
-        const text = e.currentTarget.value
-        const last = text.substring(text.length-1,text.length)
-        setcustomiseState({currentstring: customiseState.currentstring + last,  string: e.currentTarget.value})
+        setcustomiseState(e.currentTarget.value)
     }
     const buttonClick = (e) =>{
-        setcustomiseState({currentstring: customiseState.currentstring+e.currentTarget.value })
+        setcustomiseState(customiseState+e.currentTarget.value)
     }
-    const deleteKey = (e) =>{
-        const KeyID = e.keyCode;
-        const text = customiseState.currentstring;
-        const back = text.substring(0,text.length-1)
-        switch(KeyID)
-        {
-            case 8://backspace
-            setcustomiseState({currentstring: back});
-            alert(back);
-            break; 
-            case 46://delete
-            setcustomiseState({currentstring: back});
-            break;
-            default:
-            break;
-        }
+
+    const fontChange = (e) =>{
+        setfontState(e.currentTarget.value)
     }
-    console.log(customiseState);
+
+    const positionChange = (e) =>{
+        setpositionState(e.currentTarget.value)
+    }
+
+    const colourChange = (e) =>{
+        setcolourState(e.currentTarget.value)
+    }
+
+    const style = {
+        fontFamily: `${fontState}`,
+        color: `${colourState}`
+    }
+
     return(
     <div className='customise'>
-        <div className='close' onClick={closeClick}>&#10005;</div>
+        <div className='close-customise' onClick={closeClick}>&#10005;</div>
+        <div className='sample' style={style}><span>{ customiseState }</span></div>
         <form>
-            <input type='text' name='embosing' placeholder='Type your embosing here' onChange={customiseChange} value={customiseState.currentstring} onKeyDown={deleteKey}/>
-            <select name='fonts' id='fonts'>
+            <input type='text' name='embosing' placeholder='Type your embosing here' onChange={customiseChange} value={customiseState}/>
+            <select name='fonts' id='fonts' onChange={fontChange}>
             <option value='' disabled selected hidden>Font</option>
-            <option value='times-new-roman'>Times New Roman</option>
-            <option value='handwritten'>Handwritten Font</option>
+            <option value='TimesNewRoman'>Times New Roman</option>
+            <option value='Parisienne'>Handwritten Font</option>
             </select>
-            <select name='position' id='position'>
+            <select name='position' id='position' onChange={positionChange}>
             <option value='' disabled selected hidden>Position</option>
             <option value='top-font'>Top Font</option>
             </select>
-            <select name='colour' id='colour'>
+            <select name='colour' id='colour' onChange={colourChange}>
             <option value='' disabled selected hidden>Colour</option>
             <option value='natural'>Natural</option>
             <option value='gold'>Gold</option>
             </select>
+            <div>
             <input type='button' onClick={buttonClick} value='&#10084;' id='10'/>
             <input type='button' onClick={buttonClick} value='&#10025;' id='25'/>
             <input type='button' onClick={buttonClick} value='&#10047;' id='47'/>
             <input type='button' onClick={buttonClick} value='&#9728;' id='28'/>
+            </div>
+            <button className='addcustomise' onClick={()=>addProduct(customise)}>ADD TO CART</button>
         </form>
     </div>
 )};
 
-export default CustomiseButton;
+const mapDispatchToProps = dispatch =>({
+    addProduct: product => dispatch(addProduct(product))
+})
+
+export default connect(null,mapDispatchToProps)(CustomiseButton);

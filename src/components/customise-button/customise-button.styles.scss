@@ -1,10 +1,84 @@
 .customise{
-    display: block;
+    display: flex;
+    flex-direction: column;
     width:300px;
     height:300px;
-    background-color: red;
+    background-color: white;
     position: fixed;
     top:200px;
     left:40.5%;
     z-index: 1;
+    box-shadow: 3px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    .close-customise{
+        width:100%;
+        text-align: right;
+        margin-right: 15px;
+    }
+    .sample{
+        width: 90%;
+        height: 50px;
+        font-size: 22px;
+    }
+    input[type="text"]{
+        display: inline-flex;
+        flex-wrap: nowrap;
+        border: 1px solid rgb(224, 224, 224);
+        border-radius: 5px;
+        font-size: 16px;
+        height:22px;
+        color: rgb(24, 32, 38);
+        margin-bottom: 5px;
+    }
+    select[name="fonts"]{
+        display: inline-flex;
+        width: 90%;
+        border: 1px solid rgb(224, 224, 224);
+        border-radius: 5px;
+        font-size: 16px;
+        height:22px;
+        color: rgb(24, 32, 38);
+        margin: 2px;
+    }
+    select[name="position"]{
+        display: inline-flex;
+        width: 50%;
+        border: 1px solid rgb(224, 224, 224);
+        border-radius: 5px;
+        font-size: 16px;
+        height:22px;
+        color: rgb(24, 32, 38);
+        margin: 2px;
+    }
+    select[name="colour"]{
+        display: inline-flex;
+        width: 38%;
+        border: 1px solid rgb(224, 224, 224);
+        border-radius: 5px;
+        font-size: 16px;
+        height:22px;
+        color: rgb(24, 32, 38);
+        margin: 2px;
+    }
+    input[type="button"]{
+        display: inline-flex;
+        text-align: center;
+        border: 1px solid rgb(224, 224, 224);
+        border-radius: 5px;
+        font-size: 16px;
+        width: 25px;
+        height:25px;
+        color: rgb(24, 32, 38);
+        margin: 1px;
+    }
+    .addcustomise{
+        width:160px;
+        height:50px;
+        color:white;
+        background-color: black;
+        font-size: 18px;
+        border: none;
+        margin:5px;
+    }
 }
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');

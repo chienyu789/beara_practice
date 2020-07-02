@@ -26,7 +26,7 @@ const ProductPage = ({ product, match, addProduct }) =>{
             <button className='customisebutton'onClick={toggleCustomise}>EMBOSSING(£15)</button>
             <button className='addbutton' onClick={()=>addProduct(product)}>ADD TO CART</button>
             </div>
-            { seenState? <CustomiseButton closeClick={toggleCustomise}/>: null}
+            { seenState? <CustomiseButton closeClick={toggleCustomise} product={product}/>: null}
         </div>
 )};
 
