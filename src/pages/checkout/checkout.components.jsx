@@ -1,18 +1,28 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
-
 import { selectCartTotal } from '../../redux/cart/cart.selector';
 
-import { CountryDropdown } from 'react-country-region-selector';
+import ShippingAddress from '../../components/shipping-address/shipping-address.components';
+import ShippingOption from '../../components/shipping-option/shipping-option.components';
+
 
 import './checkout.styles.scss';
 
 const CheckoutPage = ({ cartProducts, total}) =>{
-    const [ countryState, setcountryState ] = useState({country: ''});
-    const selectCountry = (val) => {
-        setcountryState({ country: val });
-      }
+    const [ stepState, setstepState ] = useState({ currentStep:1 });
+    
+    const handleStep = (event) => {
+        event.preventDefault();
+        setstepState({ currentStep: stepState.currentStep+1 });
+    };
+    const [ shippriceState, setshippriceState ] = useState({ label:'', price:0 });
+    
+    const handleClicked = (e) =>{
+        setshippriceState({label: e.currentTarget.id, price: parseInt(e.currentTarget.value)})
+    }
+    console.log(shippriceState);
+
     return(
     <div className='checkout-page'>
         <div className='checkout-detail'>
@@ -25,32 +35,13 @@ const CheckoutPage = ({ cartProducts, total}) =>{
                 </div>
                 ))
             }
-            <span className='finaltotal'>£{total}</span>
+            <span className='finaltotal'>Shipping Price £{shippriceState.price}</span>
+            <span className='finaltotal'>£{total+shippriceState.price}</span>
+            <span className='finaltotal'>with £{(total/6).toFixed(2)}in taxes</span>
         </div>
-        <div className='shipping-detail'>
-            <form>
-                <h1>SHIPPING ADDRESS</h1>
-                Email<br/>
-                <input type='email' name='email'/>
-                Name<br/>
-                <input type='text' name='name'/>
-                Phone number<br/>
-                <input type='text' name='phone-number'/><br/>
-                Country/ Region<br/>
-                <CountryDropdown
-                value={countryState.country}
-                onChange={(val) => selectCountry(val)} /><br/>
-                Address
-                <input type='text' name='address'/><br/>
-                Town
-                <input type='text' name='town'/>
-                County
-                <input type='text' name='county'/>
-                Post Code
-                <input type='text' name='post-code'/><br/>
-                Customer Notes
-                <input type='text-area' name='customer-notes'/>
-            </form>
+        <div>
+        <ShippingAddress handleSubmit={handleStep}/>
+        <ShippingOption step={stepState.currentStep} onChange={handleClicked}/>
         </div>
     </div>
 )};
