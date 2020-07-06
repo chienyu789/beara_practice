@@ -8,20 +8,19 @@ import { ReactComponent as ShoppingIcon } from '../../assets/carticon.svg';
 
 import './cart-icon.styles.scss';
 
-const CartIcon = ({showCart, count}) =>{
-    return(
-    <div className='cart' onClick={showCart}>
-        <ShoppingIcon/>
-        <span>{ count }</span>
-    </div>
-)};
+const CartIcon = ({ showCart, count }) => (
+  <div className="cart" onClick={showCart}>
+    <ShoppingIcon />
+    <span>{ count }</span>
+  </div>
+);
 
-const mapDispatchToProps = dispatch =>({
-    showCart: () => dispatch(showCart())
-})
+const mapDispatchToProps = (dispatch) => ({
+  showCart: () => dispatch(showCart()),
+});
 
-const mapStateToProps = (state) =>({
-    count: selectCartCount(state)
-})
+const mapStateToProps = (state) => ({
+  count: selectCartCount(state),
+});
 
-export default connect(mapStateToProps,mapDispatchToProps)(CartIcon);
+export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);

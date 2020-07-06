@@ -2,10 +2,10 @@ import React from 'react';
 
 import './shipping-option.styles.scss';
 
-const ShippingOption = ({step, onChange}) =>{
-    const disabled = step > 1;
-    
-    return(
+const ShippingOption = ({ step, onChange }) => {
+  const disabled = step > 1;
+
+  return (
     <div>
         <fieldset disabled={!disabled}>
         <p>shipping option</p>
