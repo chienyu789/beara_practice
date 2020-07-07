@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, withRouter} from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 
 import HomePage from './pages/homepage/homepage.components';
 import ShopPage from './pages/shoppage/shoppage.components';
@@ -18,7 +18,7 @@ function App(props) {
   return (
     <div className="App">
       {
-        props.location.pathname!=='/checkout' && <Header/>
+        props.location.pathname!=='/checkout' && <Header languageSelect={props.languageSelect} />
       }
       <Route exact path='/' component={HomePage}/>
       <Route path='/customise' component={CustomisePage}/>

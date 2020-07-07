@@ -10,7 +10,6 @@ import Customise5 from '../../assets/customise5.jpg';
 import Customise6 from '../../assets/customise6.jpg';
 import Customise7 from '../../assets/customise7.jpg';
 
-
 import './customise.styles.scss';
 
 const CustomisePage = () => (

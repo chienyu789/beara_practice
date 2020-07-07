@@ -10,24 +10,24 @@ import { createSelector } from 'reselect';
 //     other:7
 // };
 
-const selectShop = state => state.shop;
+const selectShop = (state) => state.shop;
 
 export const selectCollections = createSelector(
-    [selectShop],
-    shop => shop.collections
+  [selectShop],
+  (shop) => shop.collections,
 );
 
 export const selectCollectionForPreview = createSelector(
-    [selectCollections],
-    collections => Object.keys(collections).map( key => collections[key])
-)
-
-export const selectCategory = categoryUrlParams =>createSelector(
-    [selectCollections],
-    collections => collections[categoryUrlParams]
+  [selectCollections],
+  (collections) => Object.keys(collections).map((key) => collections[key]),
 );
 
-export const selectProduct = (categoryUrlParams, productUrlParams) =>createSelector(
-    [selectCategory(categoryUrlParams)],
-    items => items.items.find(item => item.title === productUrlParams )
+export const selectCategory = (categoryUrlParams) => createSelector(
+  [selectCollections],
+  (collections) => collections[categoryUrlParams],
+);
+
+export const selectProduct = (categoryUrlParams, productUrlParams) => createSelector(
+  [selectCategory(categoryUrlParams)],
+  (items) => items.items.find((item) => item.title === productUrlParams),
 );

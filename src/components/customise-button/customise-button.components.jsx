@@ -6,8 +6,7 @@ import { addProduct } from '../../redux/cart/cart.actions';
 
 import './customise-button.styles.scss';
 
-const CustomiseButton = ({ closeClick, product, addProduct }) => {
-  // const { id, name, imgUrl, price } = product;
+const CustomiseButton = ({ closeClick, product, addProductToCart }) => {
   const [customiseState, setcustomiseState] = useState('');
   const [fontState, setfontState] = useState('');
   const [positionState, setpositionState] = useState('');
@@ -71,7 +70,7 @@ const CustomiseButton = ({ closeClick, product, addProduct }) => {
           <input type="button" onClick={buttonClick} value="&#10047;" id="47" />
           <input type="button" onClick={buttonClick} value="&#9728;" id="28" />
         </div>
-        <button type="button" className="addcustomise" onClick={() => addProduct(customise)}>ADD TO CART</button>
+        <button type="button" className="addcustomise" onClick={() => addProductToCart(customise)}>ADD TO CART</button>
       </form>
     </div>
   );
@@ -79,10 +78,17 @@ const CustomiseButton = ({ closeClick, product, addProduct }) => {
 
 CustomiseButton.propTypes = {
   closeClick: PropTypes.func.isRequired,
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    imgUrl: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+  }).isRequired,
+  addProductToCart: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  addProduct: (product) => dispatch(addProduct(product)),
+  addProductToCart: (product) => dispatch(addProduct(product)),
 });
 
 export default connect(null, mapDispatchToProps)(CustomiseButton);

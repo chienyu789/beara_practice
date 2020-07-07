@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
@@ -8,19 +9,22 @@ import DropdownList from '../dropdown-list/dropdown-list.components';
 
 import './dropdownbags.styles.scss';
 
-const DropDownBags = ({bags})=>(
-
-            <div className='bag'>
-                {
-                bags.map(({ id, subtitle, linkUrl }) => (
-                <DropdownList key={id} subtitle={subtitle} linkUrl={linkUrl}/>))
-                }
-            </div>
-        );
+const DropDownBags = ({ bags }) => (
+  <div className="bag">
+    {
+    bags.map(({ id, subtitle, linkUrl }) => (
+      <DropdownList key={id} subtitle={subtitle} linkUrl={linkUrl} />))
+    }
+  </div>
+);
 
 const mapStateToProps = createStructuredSelector({
-    bags: selectDropdownBags
-})
+  bags: selectDropdownBags,
+});
 
+DropDownBags.propTypes = {
+  bags: PropTypes.func.isRequired,
+  map: PropTypes.func.isRequired,
+};
 
 export default connect(mapStateToProps)(DropDownBags);

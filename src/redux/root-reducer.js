@@ -5,7 +5,7 @@ import shopReducer from './shop/shop.reducer';
 import cartReducer from './cart/cart.reducer';
 
 export default combineReducers({
-    dropdownbags: dropdownbagsReducer,
-    shop: shopReducer,
-    cart: cartReducer
-})
+  dropdownbags: dropdownbagsReducer,
+  shop: shopReducer,
+  cart: cartReducer,
+});

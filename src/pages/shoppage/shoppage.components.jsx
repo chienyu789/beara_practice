@@ -19,7 +19,7 @@ const ShopPage = ({ match }) => (
 );
 
 ShopPage.propTypes = {
-  match: PropTypes.objectOf({
+  match: PropTypes.shape({
     params: PropTypes.shape({
       path: PropTypes.string,
       url: PropTypes.string,

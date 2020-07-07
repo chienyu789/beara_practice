@@ -1,4 +1,6 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './shipping-option.styles.scss';
 
@@ -7,18 +9,24 @@ const ShippingOption = ({ step, onChange }) => {
 
   return (
     <div>
-        <fieldset disabled={!disabled}>
+      <fieldset disabled={!disabled}>
         <p>shipping option</p>
         <form>
-        <input type='radio' id='free' name='option' value='0' onClick={onChange}/>
-        <label for='free'>Free UK Shipping</label>
-        <input type='radio' id='express' name='option' value='5' onClick={onChange}/>
-        <label for='express'>Express UK Shipping</label>
-        <input type='radio' id='international' name='option' value='25' onClick={onChange}/>
-        <label for='international'>International Shipping</label>
+          <label htmlFor="free">Free UK Shipping</label>
+          <input type="radio" id="free" name="option" value="0" onClick={onChange} />
+          <label htmlFor="express">Express UK Shipping</label>
+          <input type="radio" id="express" name="option" value="5" onClick={onChange} />
+          <label htmlFor="international">International Shipping</label>
+          <input type="radio" id="international" name="option" value="25" onClick={onChange} />
         </form>
-        </fieldset>
+      </fieldset>
     </div>
-)};
+  );
+};
+
+ShippingOption.propTypes = {
+  step: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
 
 export default ShippingOption;

@@ -10,7 +10,7 @@ import './productpage.styles.scss';
 
 const giftimg = require('../../assets/wrapping-paper.jpg');
 
-const ProductPage = ({ product, addProduct }) => {
+const ProductPage = ({ product, addProductToCart }) => {
   const {
     id, name, imgUrl, price,
   } = product;
@@ -32,9 +32,9 @@ const ProductPage = ({ product, addProduct }) => {
         </span>
       </div>
       <div className="selectbutton">
-        <button type="button" className="customisebutton" onClick={() => addProduct(gift)}>GIFT WRAPPING(£6)</button>
+        <button type="button" className="customisebutton" onClick={() => addProductToCart(gift)}>GIFT WRAPPING(£6)</button>
         <button type="button" className="customisebutton" onClick={toggleCustomise}>EMBOSSING(£15)</button>
-        <button type="button" className="addbutton" onClick={() => addProduct(product)}>ADD TO CART</button>
+        <button type="button" className="addbutton" onClick={() => addProductToCart(product)}>ADD TO CART</button>
       </div>
       { seenState ? <CustomiseButton closeClick={toggleCustomise} product={product} /> : null}
     </div>
@@ -48,11 +48,11 @@ ProductPage.propTypes = {
     imgUrl: PropTypes.string,
     price: PropTypes.number,
   }),
-  addProduct: PropTypes.func,
+  addProductToCart: PropTypes.func,
 };
 ProductPage.defaultProps = {
   product: null,
-  addProduct: null,
+  addProductToCart: null,
 };
 
 const mapStateToProps = (state, ownProps) => ({
@@ -60,7 +60,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addProduct: (product) => dispatch(addProduct(product)),
+  addProductToCart: (product) => dispatch(addProduct(product)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductPage);

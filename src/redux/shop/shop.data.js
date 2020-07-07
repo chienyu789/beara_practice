@@ -9,7 +9,7 @@ const SHOP_DATA = {
         id: 101,
         title: 'yoyo-black',
         name: 'YOYO BLACK',
-        imgUrl: require('../../assets/yoyo-black.jpg'),
+        imgUrl: require('../../assets/yoyo-black.jpg'), // eslint-disable-line global-require
         linkUrl: '/category/backpacks/yoyo-black',
         price: 135,
       },
@@ -17,7 +17,7 @@ const SHOP_DATA = {
         id: 102,
         title: 'yoyo-brown',
         name: 'YOYO BROWN',
-        imgUrl: require('../../assets/yoyo-brown.jpg'),
+        imgUrl: require('../../assets/yoyo-brown.jpg'), // eslint-disable-line global-require
         linkUrl: '/category/backpacks/yoyo-brown',
         price: 135,
       },
@@ -25,7 +25,7 @@ const SHOP_DATA = {
         id: 103,
         title: 'eva-black',
         name: 'EVA BLACK',
-        imgUrl: require('../../assets/eva-black.jpg'),
+        imgUrl: require('../../assets/eva-black.jpg'), // eslint-disable-line global-require
         linkUrl: '/category/backpacks/eva-black',
         price: 135,
       },
@@ -33,7 +33,7 @@ const SHOP_DATA = {
         id: 104,
         title: 'eva-brown',
         name: 'EVA BROWN',
-        imgUrl: require('../../assets/eva-brown.jpg'),
+        imgUrl: require('../../assets/eva-brown.jpg'), // eslint-disable-line global-require
         linkUrl: '/category/backpacks/eva-brown',
         price: 135,
       },
@@ -41,7 +41,7 @@ const SHOP_DATA = {
         id: 105,
         title: 'frida-bp',
         name: 'FRIDA-BACKPACK',
-        imgUrl: require('../../assets/frida-bp.jpg'),
+        imgUrl: require('../../assets/frida-bp.jpg'), // eslint-disable-line global-require
         linkUrl: '/category/backpacks/frida-bp',
         price: 140,
       },
@@ -49,7 +49,7 @@ const SHOP_DATA = {
         id: 106,
         title: 'lila',
         name: 'LILA',
-        imgUrl: require('../../assets/lila.jpg'),
+        imgUrl: require('../../assets/lila.jpg'), // eslint-disable-line global-require
         linkUrl: '/category/backpacks/lila',
         price: 150,
       },
@@ -65,7 +65,7 @@ const SHOP_DATA = {
         id: 201,
         title: 'will-satchel-s',
         name: 'WILL SATCHEL SMALL',
-        imgUrl: require('../../assets/will-satchel-s.jpg'),
+        imgUrl: require('../../assets/will-satchel-s.jpg'), // eslint-disable-line global-require
         linkUrl: '/category/stachels/will-satchel-s',
         price: 180,
       },
@@ -73,7 +73,7 @@ const SHOP_DATA = {
         id: 202,
         title: 'will-satchel-m',
         name: 'WILL SATCHEL MEDIUM',
-        imgUrl: require('../../assets/will-satchel-m.jpg'),
+        imgUrl: require('../../assets/will-satchel-m.jpg'), // eslint-disable-line global-require
         linkUrl: '/category/stachels/will-satchel-m',
         price: 220,
       },
@@ -81,7 +81,7 @@ const SHOP_DATA = {
         id: 203,
         title: 'will-satchel-l',
         name: 'WILL SATCHEL LARGE',
-        imgUrl: require('../../assets/will-satchel-l.jpg'),
+        imgUrl: require('../../assets/will-satchel-l.jpg'), // eslint-disable-line global-require
         linkUrl: '/category/stachels/will-satchel-l',
         price: 280,
       },
@@ -89,7 +89,7 @@ const SHOP_DATA = {
         id: 204,
         title: 'santa-anna-xs',
         name: 'SANTA ANNA EXTRA SMALL',
-        imgUrl: require('../../assets/santa-anna-xs.jpg'),
+        imgUrl: require('../../assets/santa-anna-xs.jpg'), // eslint-disable-line global-require
         linkUrl: '/category/stachels/santa-anna-xs',
         price: 145,
       },
@@ -97,7 +97,7 @@ const SHOP_DATA = {
         id: 205,
         title: 'santa-anna-s',
         name: 'SANTA ANNA SMALL',
-        imgUrl: require('../../assets/santa-anna-s.jpg'),
+        imgUrl: require('../../assets/santa-anna-s.jpg'), // eslint-disable-line global-require
         linkUrl: '/category/stachels/santa-anna-s',
         price: 155,
       },
@@ -105,7 +105,7 @@ const SHOP_DATA = {
         id: 206,
         title: 'santa-anna-m',
         name: 'SANTA ANNA MEDIUM',
-        imgUrl: require('../../assets/santa-anna-m.jpg'),
+        imgUrl: require('../../assets/santa-anna-m.jpg'), // eslint-disable-line global-require
         linkUrl: '/category/stachels/santa-anna-m',
         price: 165,
       },
@@ -121,7 +121,7 @@ const SHOP_DATA = {
         id: 301,
         title: 'alex-hb-brn',
         name: 'ALEX HANDBAG BROWN',
-        imgUrl: require('../../assets/alex-hb-brn.jpg'),
+        imgUrl: require('../../assets/alex-hb-brn.jpg'), // eslint-disable-line global-require
         linkUrl: '/category/handbags/alex-hb-brn',
         price: 130,
       },
@@ -129,7 +129,7 @@ const SHOP_DATA = {
         id: 302,
         title: 'alex-black',
         name: 'ALEX HANDBAG BLACK',
-        imgUrl: require('../../assets/alex-black.jpg'),
+        imgUrl: require('../../assets/alex-black.jpg'), // eslint-disable-line global-require
         linkUrl: '/category/handbags/alex-black',
         price: 130,
       },
