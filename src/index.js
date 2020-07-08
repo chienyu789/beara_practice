@@ -13,7 +13,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const Root = () => {
-  const [locale, setLocale] = useState('en'); //navigator.language user's area
+  const [locale, setLocale] = useState('en'); // navigator.language user's area
   let messages;
 
   if (locale.includes('zh')) {
@@ -22,14 +22,14 @@ const Root = () => {
     messages = en;
   }
 
-  return(
-  <IntlProvider locale={locale} key={locale} defaultLocale="en" messages={messages}>
-    <Provider store={store}>
-      <BrowserRouter>
-        <App languageSelect={(language)=>setLocale(language)}/>
-      </BrowserRouter>
-    </Provider>
-  </IntlProvider>
+  return (
+    <IntlProvider locale={locale} key={locale} defaultLocale="en" messages={messages}>
+      <Provider store={store}>
+        <BrowserRouter>
+          <App languageSelect={(language) => setLocale(language)} />
+        </BrowserRouter>
+      </Provider>
+    </IntlProvider>
   );
 };
 

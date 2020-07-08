@@ -36,6 +36,7 @@ const Header = ({ hidden, count, languageSelect }) => {
       <div className="header">
         <div className="languageselect">
           <button type="button" onClick={() => languageSelect('en')}>UK </button>
+          <span>|</span>
           <button type="button" onClick={() => languageSelect('zh')}>中國</button>
         </div>
         <div className="dropdown" onMouseOver={ShowBagbar} onFocus={ShowBagbar} onMouseLeave={HideBagbar}>
@@ -92,6 +93,7 @@ const mapStateToProps = (state) => ({
 Header.propTypes = {
   hidden: PropTypes.bool.isRequired,
   count: PropTypes.number.isRequired,
+  languageSelect: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps)(Header);

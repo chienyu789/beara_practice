@@ -37,6 +37,7 @@ const ProductPage = ({ product, addProductToCart }) => {
         <button type="button" className="addbutton" onClick={() => addProductToCart(product)}>ADD TO CART</button>
       </div>
       { seenState ? <CustomiseButton closeClick={toggleCustomise} product={product} /> : null}
+      { seenState ? <div className="cover" /> : null}
     </div>
   );
 };

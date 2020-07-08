@@ -46,10 +46,12 @@ const CustomiseButton = ({ closeClick, product, addProductToCart }) => {
 
   return (
     <div className="customise">
-      <div className="close-customise" onClick={closeClick}>&#10005;</div>
+      <div className="close-customise">
+        <button type="button" onClick={closeClick}>&#10005;</button>
+      </div>
       <div className="sample" style={style}><span>{ customiseState }</span></div>
       <form>
-        <input type="text" name="embosing" placeholder="Type your embosing here" onChange={customiseChange} value={customiseState}/>
+        <input type="text" name="embosing" placeholder="Type your embosing here" onChange={customiseChange} value={customiseState} />
         <select name="fonts" id="fonts" onChange={fontChange}>
           <option value="" disabled selected hidden>Font</option>
           <option value="TimesNewRoman">Times New Roman</option>
@@ -70,7 +72,7 @@ const CustomiseButton = ({ closeClick, product, addProductToCart }) => {
           <input type="button" onClick={buttonClick} value="&#10047;" id="47" />
           <input type="button" onClick={buttonClick} value="&#9728;" id="28" />
         </div>
-        <button type="button" className="addcustomise" onClick={() => addProductToCart(customise)}>ADD TO CART</button>
+        <button type="button" className="addcustomise" onClick={() => { addProductToCart(customise); closeClick(); }}>ADD TO CART</button>
       </form>
     </div>
   );

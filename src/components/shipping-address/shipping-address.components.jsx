@@ -15,29 +15,50 @@ const ShippingAddress = ({ handleSubmit }) => {
     <div className="shipping-detail">
       <form onSubmit={handleSubmit}>
         <h1>SHIPPING ADDRESS</h1>
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" size="50" required />
-        <label htmlFor="name">Name</label>
-        <input type="text" id="name" size="50" required />
-        <label htmlFor="phone-number">Phone number</label>
-        <input type="text" id="phone-number" size="30" required />
-        <label htmlFor="country">Country/ Region</label>
-        <CountryDropdown
-          id="country"
-          value={countryState.country}
-          onChange={(val) => selectCountry(val)}
-          required
-        />
-        <label htmlFor="address">Address</label>
-        <input type="text" id="address" size="50" required />
-        <label htmlFor="town">Town</label>
-        <input type="text" id="town" size="10" required />
-        <label htmlFor="county">County</label>
-        <input type="text" id="county" size="10" required />
-        <label htmlFor="post-code">Post Code</label>
-        <input type="text" id="post-code" size="10" required />
-        Customer Notes
-        <textarea name="customer-notes" />
+        <div className="textfield">
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" size="50" required />
+        </div>
+        <div className="textfield">
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" size="50" required />
+        </div>
+        <div className="textfield">
+          <label htmlFor="phone-number">Phone number</label>
+          <input type="text" id="phone-number" size="30" required />
+        </div>
+        <div className="textfield">
+          <label htmlFor="country">Country/ Region</label>
+          <CountryDropdown
+            id="country"
+            className="countryselect"
+            value={countryState.country}
+            onChange={(val) => selectCountry(val)}
+            required
+          />
+        </div>
+        <div className="textfield">
+          <label htmlFor="address">Address</label>
+          <input type="text" id="address" size="50" required />
+        </div>
+        <div className="address-row">
+          <div className="textfield">
+            <label htmlFor="town">Town</label>
+            <input type="text" id="town" size="12" required />
+          </div>
+          <div className="textfield">
+            <label htmlFor="county">County</label>
+            <input type="text" id="county" size="12" required />
+          </div>
+          <div className="textfield">
+            <label htmlFor="post-code">Post Code</label>
+            <input type="text" id="post-code" size="12" required />
+          </div>
+        </div>
+        <div className="textfield">
+          <label htmlFor="customer-notes">Customer Notes</label>
+          <textarea name="customer-notes" id="customer-notes" />
+        </div>
         <input type="submit" name="confirmed" value="CONFIRM" />
       </form>
     </div>

@@ -20,15 +20,15 @@ function App(props) {
       {
         props.location.pathname!=='/checkout' && <Header languageSelect={props.languageSelect} />
       }
-      <Route exact path='/' component={HomePage}/>
-      <Route path='/customise' component={CustomisePage}/>
-      <Route path='/london-store' component={LondonStore}/>
-      <Route path='/shanghai-store' component={ShanghaiStore}/>
-      <Route path='/our-story' component={StoryPage}/>
-      <Route path='/category' component={ShopPage}/>
-      <Route path='/checkout' component={CheckoutPage}/>
+      <Route exact path='/' component={HomePage} />
+      <Route path='/customise' component={CustomisePage} />
+      <Route path='/london-store' component={LondonStore} />
+      <Route path='/shanghai-store' component={ShanghaiStore} />
+      <Route path='/our-story' component={StoryPage} />
+      <Route path='/category' component={ShopPage} />
+      <Route path='/checkout' component={CheckoutPage} />
       {
-        props.location.pathname!=='/checkout' && <Footer/>
+        props.location.pathname!=='/checkout' && <Footer />
       }
     </div>
   );
