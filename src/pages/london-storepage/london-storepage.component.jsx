@@ -19,7 +19,7 @@ const LondonStore = () => (
         Thanks for your understanding. We hope everyone stays safe and will come and visit us again soon. */}
       </div>
     </div>
-    <div className='product'>
+    <div className="product">
       <img src={London2} alt='london'/>
     </div>
   </div>
