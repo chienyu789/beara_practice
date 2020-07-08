@@ -20,7 +20,7 @@ const LondonStore = () => (
       </div>
     </div>
     <div className="product">
-      <img src={London2} alt='london'/>
+      <img src={London2} alt="london" />
     </div>
   </div>
 );
