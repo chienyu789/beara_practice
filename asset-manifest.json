@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/beara_practice/static/css/main.c77d4b0c.chunk.css",
-    "main.js": "/beara_practice/static/js/main.b34da295.chunk.js",
-    "main.js.map": "/beara_practice/static/js/main.b34da295.chunk.js.map",
+    "main.js": "/beara_practice/static/js/main.cf8355a5.chunk.js",
+    "main.js.map": "/beara_practice/static/js/main.cf8355a5.chunk.js.map",
     "runtime-main.js": "/beara_practice/static/js/runtime-main.82687b91.js",
     "runtime-main.js.map": "/beara_practice/static/js/runtime-main.82687b91.js.map",
     "static/js/2.48a699ba.chunk.js": "/beara_practice/static/js/2.48a699ba.chunk.js",
     "static/js/2.48a699ba.chunk.js.map": "/beara_practice/static/js/2.48a699ba.chunk.js.map",
     "index.html": "/beara_practice/index.html",
-    "precache-manifest.2ff7d9d6efcb2b65c175aeeb038d1bca.js": "/beara_practice/precache-manifest.2ff7d9d6efcb2b65c175aeeb038d1bca.js",
+    "precache-manifest.b06f7bafd0bea237cc65f222761f2254.js": "/beara_practice/precache-manifest.b06f7bafd0bea237cc65f222761f2254.js",
     "service-worker.js": "/beara_practice/service-worker.js",
     "static/css/main.c77d4b0c.chunk.css.map": "/beara_practice/static/css/main.c77d4b0c.chunk.css.map",
     "static/js/2.48a699ba.chunk.js.LICENSE.txt": "/beara_practice/static/js/2.48a699ba.chunk.js.LICENSE.txt",
@@ -77,6 +77,6 @@
     "static/js/runtime-main.82687b91.js",
     "static/js/2.48a699ba.chunk.js",
     "static/css/main.c77d4b0c.chunk.css",
-    "static/js/main.b34da295.chunk.js"
+    "static/js/main.cf8355a5.chunk.js"
   ]
 }
