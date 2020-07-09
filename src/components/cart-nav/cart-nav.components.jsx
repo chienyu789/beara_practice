@@ -33,7 +33,7 @@ const CartNav = ({
         type="button"
         className="checkout"
         onClick={() => {
-          history.push('/checkout');
+          history.push('/checkout', { productdiscount: discountState });
         }}
       >
         CHECK OUT

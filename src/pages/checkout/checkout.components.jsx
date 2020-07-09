@@ -9,9 +9,10 @@ import ShippingOption from '../../components/shipping-option/shipping-option.com
 
 import './checkout.styles.scss';
 
-const CheckoutPage = ({ cartProducts, total }) => {
+const CheckoutPage = ({ cartProducts, total, history }) => {
   const [stepState, setstepState] = useState({ currentStep: 1 });
-
+  const discountState = history.location.state.productdiscount;
+  const producttotal = discountState ? (total * discountState).toFixed(2) : total;
   const handleStep = (event) => {
     event.preventDefault();
     setstepState({ currentStep: stepState.currentStep + 1 });
@@ -68,16 +69,23 @@ const CheckoutPage = ({ cartProducts, total }) => {
             ))
         }
         <span className="finaltotal">
+          {
+            producttotal < total
+              ? discountState
+              : 'without coupon'
+          }
+        </span>
+        <span className="finaltotal">
           Shipping Price £
           {shippriceState.price}
         </span>
         <span className="finaltotal">
           £
-          {total + shippriceState.price}
+          {producttotal + shippriceState.price}
         </span>
         <span className="finaltotal">
           with £
-          {(total / 6).toFixed(2)}
+          {(producttotal / 6).toFixed(2)}
           in taxes
         </span>
       </div>
