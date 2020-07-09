@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/beara_practice/static/css/main.c77d4b0c.chunk.css",
-    "main.js": "/beara_practice/static/js/main.b34da295.chunk.js",
-    "main.js.map": "/beara_practice/static/js/main.b34da295.chunk.js.map",
+    "main.css": "/beara_practice/static/css/main.1fb30ed8.chunk.css",
+    "main.js": "/beara_practice/static/js/main.5de6135b.chunk.js",
+    "main.js.map": "/beara_practice/static/js/main.5de6135b.chunk.js.map",
     "runtime-main.js": "/beara_practice/static/js/runtime-main.82687b91.js",
     "runtime-main.js.map": "/beara_practice/static/js/runtime-main.82687b91.js.map",
-    "static/js/2.48a699ba.chunk.js": "/beara_practice/static/js/2.48a699ba.chunk.js",
-    "static/js/2.48a699ba.chunk.js.map": "/beara_practice/static/js/2.48a699ba.chunk.js.map",
+    "static/js/2.6859ca0f.chunk.js": "/beara_practice/static/js/2.6859ca0f.chunk.js",
+    "static/js/2.6859ca0f.chunk.js.map": "/beara_practice/static/js/2.6859ca0f.chunk.js.map",
     "index.html": "/beara_practice/index.html",
-    "precache-manifest.2ff7d9d6efcb2b65c175aeeb038d1bca.js": "/beara_practice/precache-manifest.2ff7d9d6efcb2b65c175aeeb038d1bca.js",
+    "precache-manifest.fbb6e49bae409344715bc85964fb28a5.js": "/beara_practice/precache-manifest.fbb6e49bae409344715bc85964fb28a5.js",
     "service-worker.js": "/beara_practice/service-worker.js",
-    "static/css/main.c77d4b0c.chunk.css.map": "/beara_practice/static/css/main.c77d4b0c.chunk.css.map",
-    "static/js/2.48a699ba.chunk.js.LICENSE.txt": "/beara_practice/static/js/2.48a699ba.chunk.js.LICENSE.txt",
+    "static/css/main.1fb30ed8.chunk.css.map": "/beara_practice/static/css/main.1fb30ed8.chunk.css.map",
+    "static/js/2.6859ca0f.chunk.js.LICENSE.txt": "/beara_practice/static/js/2.6859ca0f.chunk.js.LICENSE.txt",
     "static/media/alex-black.jpg": "/beara_practice/static/media/alex-black.640d7e4f.jpg",
     "static/media/alex-hb-brn.jpg": "/beara_practice/static/media/alex-hb-brn.6b3ed139.jpg",
     "static/media/backpacks.jpg": "/beara_practice/static/media/backpacks.e935cb1f.jpg",
@@ -75,8 +75,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.82687b91.js",
-    "static/js/2.48a699ba.chunk.js",
-    "static/css/main.c77d4b0c.chunk.css",
-    "static/js/main.b34da295.chunk.js"
+    "static/js/2.6859ca0f.chunk.js",
+    "static/css/main.1fb30ed8.chunk.css",
+    "static/js/main.5de6135b.chunk.js"
   ]
 }

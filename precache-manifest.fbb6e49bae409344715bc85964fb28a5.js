@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "97c0f7bc1b837836307e42645eb778f0",
+    "revision": "4dd477b7d9a1e8f59ded3b5c88af0b2b",
     "url": "/beara_practice/index.html"
   },
   {
-    "revision": "58af86e9cd45ba7a2d06",
-    "url": "/beara_practice/static/css/main.c77d4b0c.chunk.css"
+    "revision": "6484cd1f540cda195fa9",
+    "url": "/beara_practice/static/css/main.1fb30ed8.chunk.css"
   },
   {
-    "revision": "8595de98df2c77543298",
-    "url": "/beara_practice/static/js/2.48a699ba.chunk.js"
+    "revision": "83c2b4f4077f4c05fecf",
+    "url": "/beara_practice/static/js/2.6859ca0f.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/beara_practice/static/js/2.48a699ba.chunk.js.LICENSE.txt"
+    "url": "/beara_practice/static/js/2.6859ca0f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "58af86e9cd45ba7a2d06",
-    "url": "/beara_practice/static/js/main.b34da295.chunk.js"
+    "revision": "6484cd1f540cda195fa9",
+    "url": "/beara_practice/static/js/main.5de6135b.chunk.js"
   },
   {
     "revision": "f480daa7a268c9f81792",
