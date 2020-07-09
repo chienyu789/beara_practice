@@ -20,7 +20,7 @@ function App(props) {
       {
         props.location.pathname!=='/checkout' && <Header languageSelect={props.languageSelect} />
       }
-      <Route exact path='/' component={HomePage} />
+      <Route exact path='/beara_practice' component={HomePage} />
       <Route path='/customise' component={CustomisePage} />
       <Route path='/london-store' component={LondonStore} />
       <Route path='/shanghai-store' component={ShanghaiStore} />
