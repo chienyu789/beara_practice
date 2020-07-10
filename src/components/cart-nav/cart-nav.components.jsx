@@ -13,11 +13,11 @@ import DiscountCode from '../discount-code/discount-code.components';
 import './cart-nav.styles.scss';
 
 const CartNav = ({
-  hideCartNav, cartProducts, total, history,
+  hideCartNav, cartProducts, total, history, style
 }) => {
   const [discountState, setdicountState] = useState('');
   return (
-    <div className="cartnav">
+    <div className="cartnav" style={style}>
       <div className="close" onClick={hideCartNav}>&#10005;</div>
       <div className="cartitems">
         {

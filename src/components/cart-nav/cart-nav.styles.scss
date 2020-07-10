@@ -1,6 +1,6 @@
 .cartnav{
     height: 100%; 
-    width: 360px; 
+    width: 0px; 
     position: fixed; 
     z-index: 4; 
     top: 0; 
@@ -8,6 +8,7 @@
     background-color:rgb(225, 230, 233); 
     overflow-x: hidden; 
     padding-top: 20px;
+    transition: 0.5s;
     cursor: pointer;
     .close{
         width:10%;
@@ -18,11 +19,13 @@
         display: inline-flex;
         flex-direction: column;
         justify-content: center;
+        transition: 0.1s;
     }
     .discountcode{
         height: 80px;
         display: inline-flex;
         align-items: center;
+        transition: 0.1s;
         input{
             border: 0.5px solid black;
             font-size: 15px;
@@ -48,6 +51,7 @@
         width:280px;
         height:40px;
         box-sizing: content-box;
+        transition: 0.1s;
         cursor: pointer;
     }
 }

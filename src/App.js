@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Route, withRouter } from 'react-router-dom';
 
 import HomePage from './pages/homepage/homepage.components';
@@ -20,18 +21,23 @@ function App(props) {
       {
         props.location.pathname !== process.env.PUBLIC_URL + '/checkout' && <Header languageSelect={props.languageSelect} />
       }
-      <Route exact path={process.env.PUBLIC_URL + '/'} component={HomePage} />
-      <Route path={process.env.PUBLIC_URL + '/customise'} component={CustomisePage} />
-      <Route path={process.env.PUBLIC_URL + '/london-store'} component={LondonStore} />
-      <Route path={process.env.PUBLIC_URL + '/shanghai-store'} component={ShanghaiStore} />
-      <Route path={process.env.PUBLIC_URL + '/our-story'} component={StoryPage} />
-      <Route path={process.env.PUBLIC_URL + '/category'} component={ShopPage} />
-      <Route path={process.env.PUBLIC_URL + '/checkout'} component={CheckoutPage} />
+      <div className="moveleft" style={props.hidden ? ({ marginRight: '360px' }) : ({ marginRight: '0px' })}>
+        <Route exact path={process.env.PUBLIC_URL + '/'} component={HomePage} />
+        <Route path={process.env.PUBLIC_URL + '/customise'} component={CustomisePage} />
+        <Route path={process.env.PUBLIC_URL + '/london-store'} component={LondonStore} />
+        <Route path={process.env.PUBLIC_URL + '/shanghai-store'} component={ShanghaiStore} />
+        <Route path={process.env.PUBLIC_URL + '/our-story'} component={StoryPage} />
+        <Route path={process.env.PUBLIC_URL + '/category'} component={ShopPage} />
+        <Route path={process.env.PUBLIC_URL + '/checkout'} component={CheckoutPage} />
+      </div>
       {
         props.location.pathname !== process.env.PUBLIC_URL + '/checkout' && <Footer />
       }
     </div>
   );
 }
+const mapStateToProps = (state) => ({
+  hidden: state.cart.hidden,
+});
 
-export default withRouter(App);
+export default withRouter(connect(mapStateToProps)(App));

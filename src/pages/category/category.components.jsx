@@ -11,7 +11,7 @@ import ProductPage from '../productpage/productpage.components';
 import './category.styles.scss';
 
 const Category = ({ match }) => (
-  <div className="products">
+  <div>
     <Route exact path={`${match.path}`} component={CategoryPage} />
     <Route path={`${match.path}/:productId`} component={ProductPage} />
   </div>

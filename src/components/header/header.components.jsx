@@ -78,8 +78,8 @@ const Header = ({ hidden, count, languageSelect }) => {
       </div>
       {
         hidden
-          ? <CartNav />
-          : null
+          ? <CartNav style={{ width: '360px' }} />
+          : <CartNav style={{ width: '0px' }} />
     }
     </div>
   );

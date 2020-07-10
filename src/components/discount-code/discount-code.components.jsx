@@ -19,7 +19,6 @@ const DiscountCode = ({ getDiscount }) => {
     } else {
       setmessageState({ discount: 1, message: 'INVALID COUPON' });
     }
-
   };
 
   return (
