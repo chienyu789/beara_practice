@@ -7,7 +7,7 @@ import './dropdown-list.styles.scss';
 
 const DropdownList = ({ id, subtitle, linkUrl }) => (
   <div className="nav">
-    <Link className="navlink" to={linkUrl} key={id}>
+    <Link className="navlink" to={process.env.PUBLIC_URL + linkUrl} key={id}>
       { subtitle }
     </Link>
   </div>
