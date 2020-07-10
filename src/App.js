@@ -18,7 +18,7 @@ function App(props) {
   return (
     <div className="App">
       {
-        props.location.pathname !=='/checkout' && <Header languageSelect={props.languageSelect} />
+        props.location.pathname !== process.env.PUBLIC_URL + '/checkout' && <Header languageSelect={props.languageSelect} />
       }
       <Route exact path={process.env.PUBLIC_URL + '/'} component={HomePage} />
       <Route path={process.env.PUBLIC_URL + '/customise'} component={CustomisePage} />
@@ -28,7 +28,7 @@ function App(props) {
       <Route path={process.env.PUBLIC_URL + '/category'} component={ShopPage} />
       <Route path={process.env.PUBLIC_URL + '/checkout'} component={CheckoutPage} />
       {
-        props.location.pathname !=='/checkout' && <Footer />
+        props.location.pathname !== process.env.PUBLIC_URL + '/checkout' && <Footer />
       }
     </div>
   );
