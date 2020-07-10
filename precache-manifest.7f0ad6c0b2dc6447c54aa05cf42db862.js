@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "46ca45366907cb5b3f26cb63ff01fd5a",
+    "revision": "5e2dfd6cdbb23939df23b3a197e82c1a",
     "url": "/beara_practice/index.html"
   },
   {
-    "revision": "1333fbc297372b520be9",
+    "revision": "22d2bcaa74a2ed7ffb76",
     "url": "/beara_practice/static/css/main.1fb30ed8.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/beara_practice/static/js/2.6859ca0f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1333fbc297372b520be9",
-    "url": "/beara_practice/static/js/main.45094ecd.chunk.js"
+    "revision": "22d2bcaa74a2ed7ffb76",
+    "url": "/beara_practice/static/js/main.f6ac9823.chunk.js"
   },
   {
     "revision": "f480daa7a268c9f81792",
