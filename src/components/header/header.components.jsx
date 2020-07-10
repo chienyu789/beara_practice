@@ -52,7 +52,7 @@ const Header = ({ hidden, count, languageSelect }) => {
         <Link className="options" to="/customise">
           CUSTOMISE
         </Link>
-        <Link className="options" to="/beara_practice">
+        <Link className="options" to="/">
           <Logo className="logo" />
         </Link>
         <div className="dropdown" onMouseOver={ShowNavbar} onFocus={ShowNavbar} onMouseLeave={HideNavbar}>
