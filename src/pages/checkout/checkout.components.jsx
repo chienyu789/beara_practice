@@ -12,6 +12,7 @@ import './checkout.styles.scss';
 const CheckoutPage = ({ cartProducts, total, history }) => {
   const [stepState, setstepState] = useState({ currentStep: 1 });
   const discountState = history.location.state.productdiscount;
+  const discountmessage = history.location.state.discountmessage;
   const producttotal = discountState ? (total * discountState).toFixed(2) : total;
   const handleStep = (event) => {
     event.preventDefault();
@@ -71,7 +72,7 @@ const CheckoutPage = ({ cartProducts, total, history }) => {
         <span className="finaltotal">
           {
             producttotal < total
-              ? discountState
+              ? discountmessage
               : 'without coupon'
           }
         </span>

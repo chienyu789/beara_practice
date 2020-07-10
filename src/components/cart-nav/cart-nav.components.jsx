@@ -33,15 +33,15 @@ const CartNav = ({
         type="button"
         className="checkout"
         onClick={() => {
-          history.push(process.env.PUBLIC_URL + '/checkout', { productdiscount: discountState });
+          history.push(process.env.PUBLIC_URL + '/checkout', { productdiscount: discountState.discount, discountmessage: discountState.message });
         }}
       >
         CHECK OUT
         <span>
           £
           {
-            discountState
-              ? (total * discountState).toFixed(2)
+            discountState.discount
+              ? (total * discountState.discount).toFixed(2)
               : total
           }
         </span>

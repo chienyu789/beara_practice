@@ -24,7 +24,7 @@ const DiscountCode = ({ getDiscount }) => {
 
   return (
     <div>
-      <form onChange={getDiscount(messageState.discount)}>
+      <form onChange={getDiscount(messageState)}>
         <input type="text" name="code" onChange={getDiscountCode} />
         <input type="button" value="apply" onClick={message} />
       </form>
