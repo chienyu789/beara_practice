@@ -18,17 +18,17 @@ function App(props) {
   return (
     <div className="App">
       {
-        props.location.pathname!=='/checkout' && <Header languageSelect={props.languageSelect} />
+        props.location.pathname !=='/checkout' && <Header languageSelect={props.languageSelect} />
       }
-      <Route exact path='/' component={HomePage} />
-      <Route path='/customise' component={CustomisePage} />
-      <Route path='/london-store' component={LondonStore} />
-      <Route path='/shanghai-store' component={ShanghaiStore} />
-      <Route path='/our-story' component={StoryPage} />
-      <Route path='/category' component={ShopPage} />
-      <Route path='/checkout' component={CheckoutPage} />
+      <Route exact path={process.env.PUBLIC_URL + '/'} component={HomePage} />
+      <Route path={process.env.PUBLIC_URL + '/customise'} component={CustomisePage} />
+      <Route path={process.env.PUBLIC_URL + '/london-store'} component={LondonStore} />
+      <Route path={process.env.PUBLIC_URL + '/shanghai-store'} component={ShanghaiStore} />
+      <Route path={process.env.PUBLIC_URL + '/our-story'} component={StoryPage} />
+      <Route path={process.env.PUBLIC_URL + '/category'} component={ShopPage} />
+      <Route path={process.env.PUBLIC_URL + '/checkout'} component={CheckoutPage} />
       {
-        props.location.pathname!=='/checkout' && <Footer />
+        props.location.pathname !=='/checkout' && <Footer />
       }
     </div>
   );
