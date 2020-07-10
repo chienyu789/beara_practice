@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -6,7 +6,9 @@ import { addProduct, showCart } from '../../redux/cart/cart.actions';
 
 import './customise-button.styles.scss';
 
-const CustomiseButton = ({ closeClick, product, addProductToCart, showCartNav }) => {
+const CustomiseButton = ({
+  closeClick, product, addProductToCart, showCartNav,
+}) => {
   const [customiseState, setcustomiseState] = useState('');
   const [fontState, setfontState] = useState('');
   const [positionState, setpositionState] = useState('');
@@ -38,6 +40,10 @@ const CustomiseButton = ({ closeClick, product, addProductToCart, showCartNav })
   const colourChange = (e) => {
     setcolourState(e.currentTarget.value);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const style = {
     fontFamily: `${fontState}`,
