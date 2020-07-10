@@ -25,12 +25,12 @@ const Footer = () => (
     <div className="footer-detail">
       <div className="aboutus">
         <span>ABOUT US</span>
-        <Link className="link" to="/our-story">Our Story</Link>
-        <Link className="link" to="/craftsmanship">Craftsmanship</Link>
-        <Link className="link" to="/embossing">Personalising Your Bag</Link>
-        <Link className="link" to="/london-store">London Store</Link>
-        <Link className="link" to="/shanghai-store">Shanghai Store</Link>
-        <Link className="link" to="/blog">Blog</Link>
+        <Link className="link" to={process.env.PUBLIC_URL + '/our-story'}>Our Story</Link>
+        <Link className="link" to={process.env.PUBLIC_URL + '/craftsmanship'}>Craftsmanship</Link>
+        <Link className="link" to={process.env.PUBLIC_URL + '/customise'}>Personalising Your Bag</Link>
+        <Link className="link" to={process.env.PUBLIC_URL + '/london-store'}>London Store</Link>
+        <Link className="link" to={process.env.PUBLIC_URL + '/shanghai-store'}>Shanghai Store</Link>
+        <Link className="link" to={process.env.PUBLIC_URL + '/blog'}>Blog</Link>
       </div>
       <div className="news">
         <form className="newsmail">

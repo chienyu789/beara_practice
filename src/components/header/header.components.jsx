@@ -40,7 +40,7 @@ const Header = ({ hidden, count, languageSelect }) => {
           <button type="button" onClick={() => languageSelect('zh')}>中國</button>
         </div>
         <div className="dropdown" onMouseOver={ShowBagbar} onFocus={ShowBagbar} onMouseLeave={HideBagbar}>
-          <Link className="options" to={process.env.PUBLIC_URL + "/category/all-products"}>
+          <Link className="options" to={process.env.PUBLIC_URL + '/category/all-products'}>
             BAGS
           </Link>
           {
@@ -49,14 +49,14 @@ const Header = ({ hidden, count, languageSelect }) => {
                   : null
             }
         </div>
-        <Link className="options" to={process.env.PUBLIC_URL + "/customise"}>
+        <Link className="options" to={process.env.PUBLIC_URL + '/customise'}>
           CUSTOMISE
         </Link>
-        <Link className="options" to={process.env.PUBLIC_URL + "/"}>
+        <Link className="options" to={process.env.PUBLIC_URL + '/'}>
           <Logo className="logo" />
         </Link>
         <div className="dropdown" onMouseOver={ShowNavbar} onFocus={ShowNavbar} onMouseLeave={HideNavbar}>
-          <Link className="title" to={process.env.PUBLIC_URL + "/london-store"}>
+          <Link className="title" to={process.env.PUBLIC_URL + '/london-store'}>
             OUR STORE
           </Link>
           {
@@ -65,7 +65,7 @@ const Header = ({ hidden, count, languageSelect }) => {
                   : null
             }
         </div>
-        <Link className="options" to={process.env.PUBLIC_URL + "/our-story"}>
+        <Link className="options" to={process.env.PUBLIC_URL + '/our-story'}>
           OUR STORY
         </Link>
         <div className="carticon">
