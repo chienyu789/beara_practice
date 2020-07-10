@@ -2,5 +2,14 @@
   text-align: center;
 }
 .moveleft{
-  transition: margin-right .5s;
+  transition: all 0.5s ease 0s;
+}
+.overleft{
+  position:fixed;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,0.2);
+  z-index:2;
+  width:100%;
+  height:100%;
 }

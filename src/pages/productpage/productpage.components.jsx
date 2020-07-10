@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { selectProduct } from '../../redux/shop/shop.selector';
-import { addProduct } from '../../redux/cart/cart.actions';
+import { addProduct, showCart } from '../../redux/cart/cart.actions';
 
 import CustomiseButton from '../../components/customise-button/customise-button.components';
 
@@ -10,7 +10,7 @@ import './productpage.styles.scss';
 
 const giftimg = require('../../assets/wrapping-paper.jpg');
 
-const ProductPage = ({ product, addProductToCart }) => {
+const ProductPage = ({ product, addProductToCart, showCartNav }) => {
   const {
     id, name, imgUrl, price,
   } = product;
@@ -32,9 +32,9 @@ const ProductPage = ({ product, addProductToCart }) => {
         </span>
       </div>
       <div className="selectbutton">
-        <button type="button" className="customisebutton" onClick={() => addProductToCart(gift)}>GIFT WRAPPING(£6)</button>
+        <button type="button" className="customisebutton" onClick={() => { addProductToCart(gift); showCartNav(); }}>GIFT WRAPPING(£6)</button>
         <button type="button" className="customisebutton" onClick={toggleCustomise}>EMBOSSING(£15)</button>
-        <button type="button" className="addbutton" onClick={() => addProductToCart(product)}>ADD TO CART</button>
+        <button type="button" className="addbutton" onClick={() => { addProductToCart(product); showCartNav(); }}>ADD TO CART</button>
       </div>
       { seenState ? <CustomiseButton closeClick={toggleCustomise} product={product} /> : null}
       { seenState ? <div className="cover" /> : null}
@@ -49,11 +49,11 @@ ProductPage.propTypes = {
     imgUrl: PropTypes.string,
     price: PropTypes.number,
   }),
-  addProductToCart: PropTypes.func,
+  addProductToCart: PropTypes.func.isRequired,
+  showCartNav: PropTypes.func.isRequired,
 };
 ProductPage.defaultProps = {
   product: null,
-  addProductToCart: null,
 };
 
 const mapStateToProps = (state, ownProps) => ({
@@ -62,6 +62,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   addProductToCart: (product) => dispatch(addProduct(product)),
+  showCartNav: () => dispatch(showCart()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductPage);
