@@ -3,6 +3,7 @@ import React from 'react';
 import MenuItem from '../menu-item/menu-item.components';
 
 import './directory.styles.scss';
+import { Category } from './directory.styles';
 
 class Directory extends React.Component {
   constructor() {
@@ -35,12 +36,12 @@ class Directory extends React.Component {
   render() {
     const { sections } = this.state;
     return (
-      <div className="directory">
+      <Category>
         { sections.map(({
           id, title, imgUrl, linkUrl,
         }) => (
           <MenuItem key={id} title={title} imgUrl={imgUrl} linkUrl={linkUrl} />))}
-      </div>
+      </Category>
     );
   }
 }

@@ -6,6 +6,7 @@ import HomeBack from '../../components/homepage-back/homepage-back.components';
 import HomeContainer from '../../components/homepage-container/homepage-container.components';
 
 import './homepage.styles.scss';
+import { BackgroundContainer, DirectoryContainer, BlogContainer, VideoContainer } from './homepage.styles';
 import SummerSales from '../../assets/summersale.jpg';
 import OurStory from '../../assets/ourstory.jpg';
 
@@ -29,21 +30,21 @@ const HomePage = () => {
 
   return (
     <div>
-      <div className="background">
+      <BackgroundContainer>
         <HomeContainer show={showState} />
         <HomeBack />
-      </div>
+      </BackgroundContainer>
       <img src={SummerSales} alt="summersale" />
-      <div className="directory">
+      <DirectoryContainer>
         <Directory />
-      </div>
+      </DirectoryContainer>
       <img src={OurStory} alt="ourstory" />
-      <div className="blogcategory">
+      <BlogContainer>
         <Blogcategory />
-      </div>
-      <div className="video">
+      </BlogContainer>
+      <VideoContainer>
         <iframe title="home" src="https://player.vimeo.com/video/386453266?background=1&autoplay=1&loop=1&byline=0&title=0" frameBorder="0" />
-      </div>
+      </VideoContainer>
     </div>
   );
 };

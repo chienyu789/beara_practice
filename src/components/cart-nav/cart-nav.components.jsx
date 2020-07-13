@@ -10,26 +10,26 @@ import { selectCartTotal } from '../../redux/cart/cart.selector';
 import CartProduct from '../cart-product/cart-product.components';
 import DiscountCode from '../discount-code/discount-code.components';
 
-import './cart-nav.styles.scss';
+import { CartNavBar, Close, Cartitems, Dicsount, Checkout } from './cart-nav.styles';
 
 const CartNav = ({
-  hideCartNav, cartProducts, total, history, style
+  hideCartNav, cartProducts, total, history, style,
 }) => {
   const [discountState, setdicountState] = useState('');
   return (
-    <div className="cartnav" style={style}>
-      <div className="close" onClick={hideCartNav}>&#10005;</div>
-      <div className="cartitems">
+    <CartNavBar style={style}>
+      <Close onClick={hideCartNav}>&#10005;</Close>
+      <Cartitems>
         {
           cartProducts.map((cartProduct) => (
             <CartProduct key={cartProduct.timestamp} cartProduct={cartProduct} />
           ))
       }
-      </div>
-      <div className="discountcode">
+      </Cartitems>
+      <Dicsount>
         <DiscountCode getDiscount={(discount) => setdicountState(discount)} />
-      </div>
-      <button
+      </Dicsount>
+      <Checkout
         type="button"
         className="checkout"
         onClick={() => {
@@ -45,8 +45,8 @@ const CartNav = ({
               : total
           }
         </span>
-      </button>
-    </div>
+      </Checkout>
+    </CartNavBar>
   );
 };
 const mapStateToProps = (state) => ({
@@ -75,6 +75,9 @@ CartNav.propTypes = {
   total: PropTypes.number.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
+  }).isRequired,
+  style: PropTypes.shape({
+    transform: PropTypes.string.isRequired,
   }).isRequired,
 };
 

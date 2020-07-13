@@ -11,7 +11,7 @@ const LondonStore = () => (
       <img src={London1} alt='london' />
       <div className='storename'>London store</div>
       <div className='content'>
-      <FormattedMessage id="store.london"/>
+      <FormattedMessage id="store.london" />
         {/* London has been our home since the beginning and we now find ourselves in a critical time in regards the COVID-19 virus.
         We have taken the difficult decision to close our London store for the foreseeable future. The safety of our customers and our staff are our priority at this time. We will remain upbeat with the belief that this will pass as it has done in China.
         Our Shanghai store has been closed for the past two months, however is due to reopen soon.

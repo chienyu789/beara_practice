@@ -1,51 +1,54 @@
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+
 const INITIAL_STATE = {
   bags: [
     {
       id: 1,
       title: 'BAGS',
-      subtitle: 'ALL',
+      subtitle: <FormattedMessage id="drop.all" />,
       linkUrl: '/category/all-products',
     },
     {
       id: 2,
       title: 'BAGS',
-      subtitle: 'BACKPACKS',
+      subtitle: <FormattedMessage id="drop.backpacks" />,
       linkUrl: '/category/backpacks',
     },
     {
       id: 3,
       title: 'BAGS',
-      subtitle: 'STACHELS',
+      subtitle: <FormattedMessage id="drop.stachels" />,
       linkUrl: '/category/stachels',
     },
     {
       id: 4,
       title: 'BAGS',
-      subtitle: 'HANDBAGS',
+      subtitle: <FormattedMessage id="drop.handbags" />,
       linkUrl: '/category/handbags',
     },
     {
       id: 5,
       title: 'BAGS',
-      subtitle: 'MENS',
+      subtitle: <FormattedMessage id="drop.mens" />,
       linkUrl: '/category/mens',
     },
     {
       id: 6,
       title: 'BAGS',
-      subtitle: 'LAPTOP CASES',
+      subtitle: <FormattedMessage id="drop.laptopcase" />,
       linkUrl: '/category/laptopcases',
     },
     {
       id: 7,
       title: 'BAGS',
-      subtitle: 'WALLETS',
+      subtitle: <FormattedMessage id="drop.wallets" />,
       linkUrl: '/category/wallets',
     },
     {
       id: 8,
       title: 'BAGS',
-      subtitle: 'OTHER',
+      subtitle: <FormattedMessage id="drop.other" />,
       linkUrl: '/category/other',
     },
   ],

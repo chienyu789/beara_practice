@@ -6,6 +6,7 @@ import ImgMove from '../imgmove/imgmove.components';
 import TextContainer from '../text-container/text-container.components';
 
 import './menu-item.styles.scss';
+import { Menu } from './menu-item.styles';
 
 const MenuItem = ({
   title, subtitle, imgUrl, history, linkUrl, match,
@@ -20,14 +21,14 @@ const MenuItem = ({
   );
 
   return (
-    <div className="menu-item"
+    <Menu className="menu-item"
       onMouseMove={onMouseMove}
       onMouseOut={onMouseLeve}
       onClick={() => history.push(`${match.url}${linkUrl}`)}
     >
-      <ImgMove title={title} subtitle={subtitle} imgUrl={imgUrl} x={positionState.x} y={positionState.y} />
-      <TextContainer x={positionState.x} y={positionState.y} />
-    </div>
+      <ImgMove title={title} subtitle={subtitle} imgUrl={imgUrl} x={positionState.x} y={positionState.y} active={positionState.active} />
+      <TextContainer x={positionState.x} y={positionState.y} active={positionState.active} />
+    </Menu>
   );
 };
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { FormattedMessage } from 'react-intl';
 import { selectCartCount } from '../../redux/cart/cart.selector';
 
 import DropDownBag from '../dropdownbags/dropdownbags.components';
@@ -41,7 +42,7 @@ const Header = ({ hidden, count, languageSelect }) => {
         </div>
         <div className="dropdown" onMouseOver={ShowBagbar} onFocus={ShowBagbar} onMouseLeave={HideBagbar}>
           <Link className="options" to={process.env.PUBLIC_URL + '/category/all-products'}>
-            BAGS
+            <FormattedMessage id="header.bags" />
           </Link>
           {
                 showbagState
@@ -50,14 +51,14 @@ const Header = ({ hidden, count, languageSelect }) => {
             }
         </div>
         <Link className="options" to={process.env.PUBLIC_URL + '/customise'}>
-          CUSTOMISE
+          <FormattedMessage id="header.customise" />
         </Link>
         <Link className="options" to={process.env.PUBLIC_URL + '/'}>
           <Logo className="logo" />
         </Link>
         <div className="dropdown" onMouseOver={ShowNavbar} onFocus={ShowNavbar} onMouseLeave={HideNavbar}>
           <Link className="title" to={process.env.PUBLIC_URL + '/london-store'}>
-            OUR STORE
+            <FormattedMessage id="header.stores" />
           </Link>
           {
                 showState
@@ -66,7 +67,7 @@ const Header = ({ hidden, count, languageSelect }) => {
             }
         </div>
         <Link className="options" to={process.env.PUBLIC_URL + '/our-story'}>
-          OUR STORY
+          <FormattedMessage id="header.story" />
         </Link>
         <div className="carticon">
           {

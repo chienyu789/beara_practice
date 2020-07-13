@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import DropdownList from '../dropdown-list/dropdown-list.components';
 import './dropdownstore.styles.scss';
@@ -12,13 +13,13 @@ class DropDownStore extends React.Component {
         {
           id: 1,
           title: 'OUR STORE',
-          subtitle: 'London Store',
+          subtitle: <FormattedMessage id="drop.london" />,
           linkUrl: '/london-store',
         },
         {
           id: 2,
           title: 'OUR STORE',
-          subtitle: 'Shanghai Store',
+          subtitle: <FormattedMessage id="drop.shanghai" />,
           linkUrl: '/shanghai-store',
         },
       ],

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 
-import './cart-product.styles.scss';
+import { Product, Image, Content, Remove } from './cart-product.styles';
 import { removeProduct } from '../../redux/cart/cart.actions';
 
 const CartProduct = ({ cartProduct, removeProductFromCart }) => {
@@ -11,31 +11,31 @@ const CartProduct = ({ cartProduct, removeProductFromCart }) => {
     imgUrl, title, name, price, emboseprice, text,
   } = cartProduct;
   return (
-    <div className="cart-product">
-      <img src={imgUrl} alt={title} />
+    <Product>
+      <Image src={imgUrl} alt={title} />
       <div>
-        <span>{name}</span>
-        <span>
+        <Content>{name}</Content>
+        <Content>
           £
           {
             emboseprice
               ? emboseprice + price
               : price
           }
-        </span>
+        </Content>
         {
           text
             ? (
-              <span>
+              <Content>
                 Embossing
                 {text}
-              </span>
+              </Content>
             )
             : null
         }
       </div>
-      <div className="remove" onClick={() => removeProductFromCart(cartProduct)}>&#10005;</div>
-    </div>
+      <Remove onClick={() => removeProductFromCart(cartProduct)}>&#10005;</Remove>
+    </Product>
   );
 };
 
