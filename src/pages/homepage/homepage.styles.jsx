@@ -13,7 +13,6 @@ export const DirectoryContainer = styled.div`
 
 export const BlogContainer = styled.div`
   width: 100%;
-  height:330px;
   padding-top: 20px;
   padding-bottom: 100px;
 `;
