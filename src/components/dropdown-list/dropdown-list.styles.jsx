@@ -6,6 +6,11 @@ export const Nav = styled.div`
   top:100%;
   background-color:rgba(0,0,0,0.5);
   padding:20px 0px 20px 0px;
+  @media (max-width:768px){
+    padding:0;
+    text-align:left;
+    background-color:rgba(0,0,0,0);
+  }
 `;
 
 export const NavLink = styled(Link)`

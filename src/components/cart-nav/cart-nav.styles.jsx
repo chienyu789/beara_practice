@@ -4,7 +4,7 @@ export const CartNavBar = styled.div`
   height: 100%; 
   width: 360px; 
   position: fixed; 
-  z-index: 4; 
+  z-index: 5; 
   top: 0; 
   right: 0;
   background-color:rgb(225, 230, 233); 
@@ -12,6 +12,12 @@ export const CartNavBar = styled.div`
   padding-top: 20px;
   transition: all 0.5s ease 0s;
   cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width:768px){
+    width: 100%; 
+  }
 `;
 
 export const Close = styled.div`

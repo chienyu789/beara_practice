@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './background.styles.scss';
+import { BackgroundImage } from './background.styles';
 
 const Background = ({ imgUrl }) => (
-  <div className="background-image" style={{ backgroundImage: `url(${imgUrl})` }} />
+  <BackgroundImage style={{ backgroundImage: `url(${imgUrl})` }} />
 );
 
 Background.propTypes = {
