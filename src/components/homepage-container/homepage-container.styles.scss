@@ -1,13 +1,12 @@
 .position{
-    display: flex;
+    display: block;
     position: absolute;
     z-index: 2;
     top:50%;
-    left:38%;
+    left:50%;
     .logo{
-        width:400px;
+        width:100%;
         height:auto;
-    
         path{
             fill:white;
         }

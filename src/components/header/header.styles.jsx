@@ -92,8 +92,7 @@ export const Line1 = styled.div`
   background: white;
   border-radius: 5px;
   opacity: 1;
-
-      animation: ${styles1};
+  animation: ${styles1};
 
 `;
 

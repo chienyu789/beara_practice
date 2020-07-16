@@ -43,10 +43,9 @@ const Header = ({ hidden, count, languageSelect }) => {
     <div>
       <HeaderContainer>
         <HeaderIcon onClick={HeaderToggle} toggle={openState}>
-          <Line1 toggle={openState} />
-          {/* <span />
           <span />
-          <span /> */}
+          <span />
+          <span />
         </HeaderIcon>
         <Languageselect>
           <button type="button" onClick={() => languageSelect('en')}>UK </button>
