@@ -1,15 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Menu = styled.div`
   width: 30%;
-  height:85%;
+  height: 85%;
   display: flex;
   justify-content: center;
-  padding: 50px 50px;
+  padding: 50px 0px;
   position: relative;
-  @media (max-width:768px){
+  @media (max-width: 768px) {
     width: 90%;
-    height:100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     position: relative;
