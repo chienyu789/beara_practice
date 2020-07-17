@@ -41,18 +41,20 @@ const CategoryPage = ({ category }) => {
   );
 };
 
+const item = PropTypes.shape({
+  id: PropTypes.number,
+  title: PropTypes.string,
+  name: PropTypes.string,
+  imgUrl: PropTypes.string,
+  linkUrl: PropTypes.string,
+  price: PropTypes.number,
+});
+
 CategoryPage.propTypes = {
   category: PropTypes.shape({
     title: PropTypes.string,
     videoUrl: PropTypes.string,
-    items: PropTypes.arrayOf({
-      id: PropTypes.number,
-      title: PropTypes.string,
-      name: PropTypes.string,
-      imgUrl: PropTypes.string,
-      linkUrl: PropTypes.string,
-      price: PropTypes.number,
-    }),
+    items: PropTypes.arrayOf(item),
   }),
 };
 

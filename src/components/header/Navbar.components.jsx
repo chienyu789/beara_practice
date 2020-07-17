@@ -38,6 +38,9 @@ const Navbar = ({ languageSelect, HeaderToggle, style }) => (
 Navbar.propTypes = {
   languageSelect: PropTypes.func.isRequired,
   HeaderToggle: PropTypes.func.isRequired,
+  style: PropTypes.shape({
+    transform: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Navbar;

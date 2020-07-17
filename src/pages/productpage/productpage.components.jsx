@@ -15,7 +15,7 @@ const ProductPage = ({ product, addProductToCart, showCartNav }) => {
     id, name, imgUrl, price,
   } = product;
   const gift = {
-    id: 'gift', name: 'gift', imgUrl: giftimg, price: 6,
+    id: 'gift', title: 'gift', name: 'gift', imgUrl: giftimg, price: 6,
   };
   const [seenState, setseenState] = useState(false);
   const toggleCustomise = () => {

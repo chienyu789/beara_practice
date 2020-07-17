@@ -16,15 +16,13 @@ const Category = ({ match }) => (
     <Route path={`${match.path}/:productId`} component={ProductPage} />
   </div>
 );
+const params = PropTypes.shape({
+  path: PropTypes.string,
+  url: PropTypes.string,
+});
 
 Category.propTypes = {
-  match: PropTypes.objectOf({
-    isExact: PropTypes.bool,
-    params: PropTypes.objectOf({
-      path: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
-    }),
-  }),
+  match: PropTypes.shape(params),
 };
 
 Category.defaultProps = {

@@ -14,13 +14,24 @@ import Navbar from './Navbar.components';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 
 // import './header.styles.scss';
-import { HeaderContainer, Nav, Languageselect, NavList, NavLogo, Options, LogoIcon, HeaderIcon, Dropdown, Cart, Line1 } from './header.styles';
+import {
+  HeaderContainer,
+  Nav,
+  Languageselect,
+  NavList,
+  NavLogo,
+  Options,
+  LogoIcon,
+  HeaderIcon,
+  Dropdown,
+  Cart,
+} from './header.styles';
 // import 'font-awesome/css/font-awesome.min.css';
 
 const Header = ({ hidden, count, languageSelect }) => {
   const [showbagState, setshowbagState] = useState(false);
   const [showState, setshowState] = useState(false);
-  const [openState, setopenState] = useState(false);
+  const [openState, setopenState] = useState(null);
 
   const ShowBagbar = () => (
     setshowbagState(true)
@@ -36,7 +47,12 @@ const Header = ({ hidden, count, languageSelect }) => {
     setshowState(false)
   );
   const HeaderToggle = () => (
-    setopenState(!openState)
+    setopenState(() => {
+      if (openState === null || openState === false) {
+        return true;
+      }
+      return false;
+    })
   );
 
   return (

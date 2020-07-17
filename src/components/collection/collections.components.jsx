@@ -26,12 +26,25 @@ const CollectionPage = ({ collections }) => (
   </div>
 );
 
+const item = PropTypes.shape({
+  id: PropTypes.number,
+  title: PropTypes.string,
+  name: PropTypes.string,
+  imgUrl: PropTypes.string,
+  linkUrl: PropTypes.string,
+  price: PropTypes.number,
+});
+
+const category = PropTypes.shape({
+  id: PropTypes.number,
+  items: PropTypes.arrayOf(item),
+  routeName: PropTypes.string,
+  title: PropTypes.string,
+  videoUrl: PropTypes.string,
+});
+
 CollectionPage.propTypes = {
-  collections: PropTypes.objectOf({
-    category: PropTypes.objectOf({
-      items: PropTypes.array.isRequired,
-    }),
-  }),
+  collections: PropTypes.arrayOf(category),
 };
 
 CollectionPage.defaultProps = {

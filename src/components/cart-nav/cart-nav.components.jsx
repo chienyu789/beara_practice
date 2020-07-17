@@ -58,20 +58,21 @@ const mapDispatchToProps = (dispatch) => ({
   hideCartNav: () => dispatch(hideCart()),
 });
 
+const cartProduct = PropTypes.shape({
+  imgUrl: PropTypes.string.isRequired,
+  linkUrl: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  emboseprice: PropTypes.number,
+  text: PropTypes.string,
+  quantity: PropTypes.number,
+  timestamp: PropTypes.number,
+});
+
 CartNav.propTypes = {
   hideCartNav: PropTypes.func.isRequired,
-  cartProducts: PropTypes.shape({
-    timestamp: PropTypes.string,
-    cartProduct: PropTypes.shape({
-      imgUrl: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      price: PropTypes.number.isRequired,
-      emboseprice: PropTypes.number,
-      text: PropTypes.string,
-    }).isRequired,
-    map: PropTypes.func.isRequired,
-  }).isRequired,
+  cartProducts: PropTypes.arrayOf(cartProduct).isRequired,
   total: PropTypes.number.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,

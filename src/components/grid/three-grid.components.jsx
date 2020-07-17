@@ -54,7 +54,7 @@ class ThreeGrid extends React.Component {
       <div className="grid">
         {
             customises.map(({ id, imgUrl }) => (
-              <div className="grid-box">
+              <div className="grid-box" key={id}>
                 <img src={imgUrl} alt={`customise-${id}`} />
               </div>
             ))

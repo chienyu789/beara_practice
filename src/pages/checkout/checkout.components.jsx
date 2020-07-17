@@ -103,18 +103,19 @@ const mapStateToProps = (state) => ({
   total: selectCartTotal(state),
 });
 
+const cartProduct = PropTypes.shape({
+  timestamp: PropTypes.number.isRequired,
+  imgUrl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  text: PropTypes.string,
+  font: PropTypes.string,
+  colour: PropTypes.string,
+  position: PropTypes.string,
+});
+
 CheckoutPage.propTypes = {
-  cartProducts: PropTypes.shape({
-    timestamp: PropTypes.string.isRequired,
-    imgUrl: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    text: PropTypes.string,
-    font: PropTypes.string,
-    colour: PropTypes.string,
-    position: PropTypes.string,
-    map: PropTypes.func.isRequired,
-  }).isRequired,
+  cartProducts: PropTypes.arrayOf(cartProduct).isRequired,
   total: PropTypes.number.isRequired,
 };
 

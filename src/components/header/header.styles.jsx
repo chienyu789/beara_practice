@@ -76,24 +76,39 @@ export const LogoIcon = styled(Link)`
 `;
 
 export const span1 = keyframes`
-from {top: 0px;}
-to {top: 200px;}
+0% {top: 0px;}
+50% {top: 12px;transform: rotate(0deg)}
+100% {top: 12px; left:8px; transform: rotate(-135deg);}
 `;
 
-export const styles1 = css`
-  ${span1} 5s ease-in-out;
+export const span11 = keyframes`
+0% {top: 12px; left:8px; transform: rotate(-135deg);}
+50% {top: 12px;transform: rotate(0deg)}
+100% {top: 0px;}
 `;
 
-export const Line1 = styled.div`
-  display: inline-block;
-  position: relative;
-  height: 3.5px;
-  width: 50%;
-  background: white;
-  border-radius: 5px;
-  opacity: 1;
-  animation: ${styles1};
+export const span2 = keyframes`
+0% {top: 12px;}
+50% {top: 12px;transform: rotate(0deg)}
+100% {top: 12px; left:8px; transform: rotate(-45deg);}
+`;
 
+export const span22 = keyframes`
+0% {top: 12px; left:8px; transform: rotate(-45deg);}
+50% {top: 12px;transform: rotate(0deg)}
+100% {top: 12px;}
+`;
+
+export const span3 = keyframes`
+0% {top: 24px;}
+50% {top: 12px;transform: rotate(0deg)}
+100% {top: 12px; left:8px; transform: rotate(-45deg);}
+`;
+
+export const span33 = keyframes`
+0% {top: 12px; left:8px; transform: rotate(-45deg);}
+50% {top: 12px;transform: rotate(0deg)}
+100% {top: 24px;}
 `;
 
 export const HeaderIcon = styled.div`
@@ -101,7 +116,6 @@ export const HeaderIcon = styled.div`
   color: white;
   height: 70px;
   width: 70px;
-  transition: .5s ease-in-out;
   position: relative;
   margin: 18px 5px;
   span{
@@ -112,48 +126,56 @@ export const HeaderIcon = styled.div`
     background: white;
     border-radius: 5px;
     opacity: 1;
-    left: 0;
-    top:24px
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    left:0;
   }
   ${(props) => {
     if (props.toggle) {
-      return `
+      return css`
             span:nth-child(1) {
-                transform: rotate(-135deg);
-                top: 12px;
-                left: 8px;
+              animation:${span1} .5s ease-in-out;
+              animation-fill-mode: forwards;
             }
             
             span:nth-child(2) {
-                transform: rotate(-45deg);
-                top: 12px;
-                left: 8px;
+              animation:${span2} .5s ease-in-out;
+              animation-fill-mode: forwards;
             }
             
             span:nth-child(3) {
-                transform: rotate(-45deg);
-                top: 12px;
-                left: 8px;
-
+              animation:${span3} .5s ease-in-out;
+              animation-fill-mode: forwards;
           }
           `;
     }
-    return `
+    if (props.toggle === false) {
+      return css`
+      span:nth-child(1) {
+        animation:${span11} .5s ease-in-out;
+        animation-fill-mode: forwards;
+      }
+      
+      span:nth-child(2) {
+        animation:${span22} .5s ease-in-out;
+        animation-fill-mode: forwards;
+      }
+      
+      span:nth-child(3) {
+        animation:${span33} .5s ease-in-out;
+        animation-fill-mode: forwards;
+      }
+      `;
+    }
+    return css`
           span:nth-child(1) {
             top: 0px;
-            transform-origin: left center;
           }
           
           span:nth-child(2) {
             top: 12px;
-            transform-origin: left center;
           }
           
           span:nth-child(3) {
             top: 24px;
-            transform-origin: left center;
           }
           `;
   }}

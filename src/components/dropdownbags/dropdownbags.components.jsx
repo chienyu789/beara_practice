@@ -23,8 +23,7 @@ const mapStateToProps = createStructuredSelector({
 });
 
 DropDownBags.propTypes = {
-  bags: PropTypes.func.isRequired,
-  map: PropTypes.func.isRequired,
+  bags: PropTypes.array.isRequired,
 };
 
 export default connect(mapStateToProps)(DropDownBags);

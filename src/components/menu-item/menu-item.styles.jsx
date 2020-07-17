@@ -13,5 +13,6 @@ export const Menu = styled.div`
     display: flex;
     justify-content: center;
     position: relative;
+    padding: 50px 0px;
   }
 `;

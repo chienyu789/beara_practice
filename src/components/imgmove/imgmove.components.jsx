@@ -35,11 +35,15 @@ const ImgMove = ({
 
 ImgMove.propTypes = {
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
   imgUrl: PropTypes.string.isRequired,
   x: PropTypes.number.isRequired,
   y: PropTypes.number.isRequired,
   active: PropTypes.bool.isRequired,
+};
+
+ImgMove.defaultProps = {
+  subtitle: null,
 };
 
 export default ImgMove;

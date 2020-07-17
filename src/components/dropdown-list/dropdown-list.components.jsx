@@ -14,9 +14,13 @@ const DropdownList = ({ id, subtitle, linkUrl }) => (
 );
 
 DropdownList.propTypes = {
-  id: PropTypes.number.isRequired,
-  subtitle: PropTypes.string.isRequired,
+  id: PropTypes.number,
+  subtitle: PropTypes.object.isRequired,
   linkUrl: PropTypes.string.isRequired,
+};
+
+DropdownList.defaultProps = {
+  id: 0,
 };
 
 export default DropdownList;
