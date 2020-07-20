@@ -90,7 +90,7 @@ const CheckoutPage = ({ cartProducts, total, history }) => {
           in taxes
         </span>
       </div>
-      <div>
+      <div className="ship">
         <ShippingAddress handleSubmit={handleStep} />
         <ShippingOption step={stepState.currentStep} onChange={handleClicked} />
       </div>

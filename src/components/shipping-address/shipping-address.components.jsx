@@ -13,19 +13,19 @@ const ShippingAddress = ({ handleSubmit }) => {
   };
   return (
     <div className="shipping-detail">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="shipping-form">
         <h1>SHIPPING ADDRESS</h1>
         <div className="textfield">
           <label htmlFor="email">Email</label>
-          <input type="email" id="email" size="50" required />
+          <input type="email" id="email" required />
         </div>
         <div className="textfield">
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" size="50" required />
+          <input type="text" id="name" required />
         </div>
         <div className="textfield">
           <label htmlFor="phone-number">Phone number</label>
-          <input type="text" id="phone-number" size="30" required />
+          <input type="text" id="phone-number" required />
         </div>
         <div className="textfield">
           <label htmlFor="country">Country/ Region</label>
@@ -39,20 +39,20 @@ const ShippingAddress = ({ handleSubmit }) => {
         </div>
         <div className="textfield">
           <label htmlFor="address">Address</label>
-          <input type="text" id="address" size="50" required />
+          <input type="text" id="address" required />
         </div>
         <div className="address-row">
           <div className="textfield">
             <label htmlFor="town">Town</label>
-            <input type="text" id="town" size="12" required />
+            <input type="text" id="town" required />
           </div>
           <div className="textfield">
             <label htmlFor="county">County</label>
-            <input type="text" id="county" size="12" required />
+            <input type="text" id="county" required />
           </div>
           <div className="textfield">
             <label htmlFor="post-code">Post Code</label>
-            <input type="text" id="post-code" size="12" required />
+            <input type="text" id="post-code" required />
           </div>
         </div>
         <div className="textfield">

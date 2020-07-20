@@ -11,13 +11,19 @@ const ShippingOption = ({ step, onChange }) => {
     <div>
       <fieldset disabled={!disabled}>
         <p>shipping option</p>
-        <form>
-          <label htmlFor="free">Free UK Shipping</label>
-          <input type="radio" id="free" name="option" value="0" onClick={onChange} />
-          <label htmlFor="express">Express UK Shipping</label>
-          <input type="radio" id="express" name="option" value="5" onClick={onChange} />
-          <label htmlFor="international">International Shipping</label>
-          <input type="radio" id="international" name="option" value="25" onClick={onChange} />
+        <form className="optionform">
+          <div className="option">
+            <label htmlFor="free">Free UK Shipping</label>
+            <input type="radio" id="free" name="option" value="0" onClick={onChange} />
+          </div>
+          <div className="option">
+            <label htmlFor="express">Express UK Shipping</label>
+            <input type="radio" id="express" name="option" value="5" onClick={onChange} />
+          </div>
+          <div className="option">
+            <label htmlFor="international">International Shipping</label>
+            <input type="radio" id="international" name="option" value="25" onClick={onChange} />
+          </div>
         </form>
       </fieldset>
     </div>

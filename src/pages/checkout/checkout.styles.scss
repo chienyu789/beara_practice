@@ -5,13 +5,14 @@
     width: 100%;
     height:auto;
     background-color:rgb(242, 242, 242);
-    .shipping-detail{
-        margin-top: 120px;
-        margin-bottom: 50px;
-        width:500px;
-        height: 800px;
-        background-color: white;
-        color: rgb(24, 32, 38);
+    @media (max-width:768px){
+        flex-direction: column;
+    }
+    .ship{
+        width:50%;
+        @media (max-width:768px){
+            width:100%;
+        }
     }
 }
 .checkout-detail{
@@ -19,11 +20,14 @@
     width:400px;
     display: flex;
     flex-direction: column;
+    @media (max-width:768px){
+        width:95%;
+    }
     .finaltotal{
         text-align: right;
     }
     .checkout-item{
-        display: flex;
+        display: inline-flex;
         margin: 10px;
         flex-direction: row;
         flex-wrap: wrap;
@@ -38,7 +42,7 @@
             margin-top:10px;
         }
         .checkout-item-main{
-            width: 250px;
+            width: 55%;
             height:80px;
             justify-content: space-between;
             align-items: center;

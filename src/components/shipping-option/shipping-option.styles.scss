@@ -1,4 +1,23 @@
 fieldset{
     border: none;
     background-color: white;
+    width:300px;
+    display: inline-flex;
+    // flex-direction: column;
+    align-items: flex-start;
+ .optionform{
+    display: flex;
+    flex-direction: column;
+    .option{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        input{
+            width:14px;
+        }
+        label{
+            width:80%;
+        }
+    }
+ }
 }

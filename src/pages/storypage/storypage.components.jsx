@@ -6,7 +6,7 @@ import OurStories2 from '../../assets/ourstory3.jpg';
 import './storypage.styles.scss';
 
 const StoryPage = () => (
-  <div>
+  <div className="story">
     <div className="video-container">
       <iframe src="https://player.vimeo.com/video/133121883?title=0&byline=0&portrait=0&playsinline=0&autoplay=1&autopause=0&app_id=122963" width="640" height="360" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen="" title="our-story" data-ready="true"/>
     </div>
