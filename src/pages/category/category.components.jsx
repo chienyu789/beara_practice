@@ -16,13 +16,12 @@ const Category = ({ match }) => (
     <Route path={`${match.path}/:productId`} component={ProductPage} />
   </div>
 );
-const params = PropTypes.shape({
-  path: PropTypes.string,
-  url: PropTypes.string,
-});
 
 Category.propTypes = {
-  match: PropTypes.shape(params),
+  match: PropTypes.shape({
+    path: PropTypes.string,
+    url: PropTypes.string,
+  }),
 };
 
 Category.defaultProps = {

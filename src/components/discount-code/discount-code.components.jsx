@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import DISCOUNT_CODE from './discount.data';
@@ -22,9 +22,13 @@ const DiscountCode = ({ getDiscount }) => {
     }
   };
 
+  useEffect(() => {
+    getDiscount(messageState);
+  }, [messageState]);
+
   return (
     <div>
-      <form onChange={getDiscount(messageState)}>
+      <form>
         <input type="text" name="code" onChange={getDiscountCode} />
         <input type="button" value="apply" onClick={message} />
       </form>

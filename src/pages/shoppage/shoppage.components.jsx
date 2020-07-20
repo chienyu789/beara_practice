@@ -20,10 +20,8 @@ const ShopPage = ({ match }) => (
 
 ShopPage.propTypes = {
   match: PropTypes.shape({
-    params: PropTypes.shape({
-      path: PropTypes.string,
-      url: PropTypes.string,
-    }),
+    path: PropTypes.string,
+    url: PropTypes.string,
   }),
 };
 

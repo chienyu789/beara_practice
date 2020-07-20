@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import Directory from '../../components/directory/directory.components';
 import Blogcategory from '../../components/blogcategory/blogcategory.components';
 import HomeBack from '../../components/homepage-back/homepage-back.components';
-import HomeContainer from '../../components/homepage-container/homepage-container.components';
 
 import './homepage.styles.scss';
 import { BackgroundContainer, DirectoryContainer, BlogContainer, VideoContainer } from './homepage.styles';
@@ -31,8 +30,7 @@ const HomePage = () => {
   return (
     <div>
       <BackgroundContainer>
-        <HomeContainer show={showState} />
-        <HomeBack />
+        <HomeBack show={showState} />
       </BackgroundContainer>
       <img src={SummerSales} alt="summersale" />
       <DirectoryContainer>

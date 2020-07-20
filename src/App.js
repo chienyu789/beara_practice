@@ -26,7 +26,7 @@ function App(props) {
         props.location.pathname !== process.env.PUBLIC_URL + '/checkout' && <Header languageSelect={props.languageSelect} />
       }
       {
-          props.hidden == true && props.location.pathname !== process.env.PUBLIC_URL + '/checkout'
+          props.hidden === true && props.location.pathname !== process.env.PUBLIC_URL + '/checkout'
             ? <div className="overleft" onClick={props.hideCartNav} />
             : null
         }

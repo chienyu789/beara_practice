@@ -13,8 +13,8 @@ import Customise7 from '../../assets/customise7.jpg';
 import './customise.styles.scss';
 
 const CustomisePage = () => (
-  <div>
-    <div className="video-container">
+  <div className="customise-page">
+    <div className="customise-video">
       <iframe src="https://player.vimeo.com/video/278923056?background=1&autoplay=1&loop=1&byline=0&title=0" width="640" height="360" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen="" title="customise" data-ready="true" />
     </div>
     <div className="customise-detail">
@@ -77,7 +77,7 @@ const CustomisePage = () => (
         —
         Celebrate the coming year by personalising your bag with our cute rat embossing. Please note the Rat cannot be combined with letters.
       </div>
-      <div className='cu-box'>
+      <div className="cu-box">
         <img src={Customise6} alt="Customise6" />
       </div>
       <div className="cu-box">

@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Background from '../background/background.components';
+import HomeContainer from '../homepage-container/homepage-container.components';
 
 import './homepage-back.styles.scss';
 
@@ -28,14 +30,20 @@ class HomeBack extends React.Component {
 
   render() {
     const { backs } = this.state;
+    const { show } = this.props;
     return (
       <div className="backs">
         {
             backs.map(({ id, imgUrl }) => <Background key={id} imgUrl={imgUrl} />)
         }
+        <HomeContainer show={show} />
       </div>
     );
   }
 }
+
+HomeBack.propTypes = {
+  show: PropTypes.bool.isRequired,
+};
 
 export default HomeBack;

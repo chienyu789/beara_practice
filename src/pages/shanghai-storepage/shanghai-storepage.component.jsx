@@ -11,15 +11,13 @@ import Shanghai7 from '../../assets/shanghai7.jpg';
 import './shanghai-store.styles.scss';
 
 const ShanghaiStore = () => (
-  <div>
-    <div className='stores'>
+  <div className='stores'>
       <img src={Shanghai1} alt='shanghai'/>
       <div className='storename'>Shanghai Store</div>
       <div className='content'>
         Our Shanghai showroom is located on a quiet backstreet close to Nanjing Xi Lu the converted townhouse has a peaceful charm.
         We welcome everyone to call by, relax and have a closer look at our bags.
       </div>
-    </div>
     <div className='detail'>
       <div className='box'>
         OPENING HOURS<br/>

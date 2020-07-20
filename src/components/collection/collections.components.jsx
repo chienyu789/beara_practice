@@ -8,7 +8,7 @@ import { selectCollectionForPreview } from '../../redux/shop/shop.selector';
 import './collections.styles.scss';
 
 const CollectionPage = ({ collections }) => (
-  <div>
+  <div className="collections">
     {
       collections.map(({ items }) => items.map((item) => (
         <div key={item.id} className="collectionitem">

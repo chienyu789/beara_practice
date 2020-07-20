@@ -22,7 +22,7 @@ const ProductPage = ({ product, addProductToCart, showCartNav }) => {
     setseenState(!seenState);
   };
   return (
-    <div className="product-page">
+    <div>
       <div className="product-detail" key={id}>
         <img src={imgUrl} alt={id} />
         <span className="product-name">{ name }</span>
@@ -36,7 +36,7 @@ const ProductPage = ({ product, addProductToCart, showCartNav }) => {
         <button type="button" className="customisebutton" onClick={toggleCustomise}>EMBOSSING(£15)</button>
         <button type="button" className="addbutton" onClick={() => { addProductToCart(product); showCartNav(); }}>ADD TO CART</button>
       </div>
-      { seenState ? <CustomiseButton closeClick={toggleCustomise} product={product} /> : null}
+      { seenState ? <div className="cuscover"><CustomiseButton closeClick={toggleCustomise} product={product} /></div> : null}
       { seenState ? <div className="cover" /> : null}
     </div>
   );

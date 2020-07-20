@@ -10,7 +10,9 @@ import { selectCartTotal } from '../../redux/cart/cart.selector';
 import CartProduct from '../cart-product/cart-product.components';
 import DiscountCode from '../discount-code/discount-code.components';
 
-import { CartNavBar, Close, Cartitems, Dicsount, Checkout } from './cart-nav.styles';
+import {
+  CartNavBar, Close, Cartitems, Dicsount, Checkout,
+} from './cart-nav.styles';
 
 const CartNav = ({
   hideCartNav, cartProducts, total, history, style,

@@ -1,4 +1,4 @@
-export const DISCOUNT_CODE = [
+const DISCOUNT_CODE = [
   {
     code: 'aa123',
     discount: 0.9,

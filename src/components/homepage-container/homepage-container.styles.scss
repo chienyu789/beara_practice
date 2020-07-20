@@ -1,14 +1,19 @@
 .position{
     display: block;
-    position: absolute;
+    width: 25%;
     z-index: 2;
-    top:50%;
-    left:50%;
+    text-align: center;
+    position: relative;
     .logo{
         width:100%;
         height:auto;
         path{
             fill:white;
         }
+    }
+}
+@media (max-width:768px){
+    .position{
+        width:50%;
     }
 }

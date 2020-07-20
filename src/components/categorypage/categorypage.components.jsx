@@ -12,8 +12,8 @@ const CategoryPage = ({ category }) => {
   }
   const { title, videoUrl, items } = category;
   return (
-    <div>
-      <div className="video-container">
+    <div className="category-page">
+      <div className="category-video">
         {
               videoUrl
                 ? (
@@ -23,20 +23,22 @@ const CategoryPage = ({ category }) => {
       }
         <span className="category-title">{title.slice(0, 1) + title.slice(1).toLowerCase()}</span>
       </div>
-      {
-            items.map((item) => (
-              <div key={item.id} className="collectionitem">
-                <Link to={process.env.PUBLIC_URL + item.linkUrl}>
-                  <img src={item.imgUrl} alt={item.name} />
-                </Link>
-                <span>{item.name}</span>
-                <span>
-                  £
-                  {item.price}
-                </span>
-              </div>
-            ))
-        }
+      <div className="items">
+        {
+              items.map((item) => (
+                <div key={item.id} className="collectionitem">
+                  <Link to={process.env.PUBLIC_URL + item.linkUrl}>
+                    <img src={item.imgUrl} alt={item.name} />
+                  </Link>
+                  <span>{item.name}</span>
+                  <span>
+                    £
+                    {item.price}
+                  </span>
+                </div>
+              ))
+          }
+        </div>
     </div>
   );
 };
