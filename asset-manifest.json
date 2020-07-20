@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/beara_practice/static/css/main.ab7c5371.chunk.css",
-    "main.js": "/beara_practice/static/js/main.ace851b5.chunk.js",
-    "main.js.map": "/beara_practice/static/js/main.ace851b5.chunk.js.map",
+    "main.css": "/beara_practice/static/css/main.29c3d8dd.chunk.css",
+    "main.js": "/beara_practice/static/js/main.499fbebe.chunk.js",
+    "main.js.map": "/beara_practice/static/js/main.499fbebe.chunk.js.map",
     "runtime-main.js": "/beara_practice/static/js/runtime-main.82687b91.js",
     "runtime-main.js.map": "/beara_practice/static/js/runtime-main.82687b91.js.map",
     "static/js/2.964d37df.chunk.js": "/beara_practice/static/js/2.964d37df.chunk.js",
     "static/js/2.964d37df.chunk.js.map": "/beara_practice/static/js/2.964d37df.chunk.js.map",
     "index.html": "/beara_practice/index.html",
-    "precache-manifest.978922908ab409e767d9a7f73746bb5f.js": "/beara_practice/precache-manifest.978922908ab409e767d9a7f73746bb5f.js",
+    "precache-manifest.bde2756bf76b61724dc74ebe2a4aea95.js": "/beara_practice/precache-manifest.bde2756bf76b61724dc74ebe2a4aea95.js",
     "service-worker.js": "/beara_practice/service-worker.js",
-    "static/css/main.ab7c5371.chunk.css.map": "/beara_practice/static/css/main.ab7c5371.chunk.css.map",
+    "static/css/main.29c3d8dd.chunk.css.map": "/beara_practice/static/css/main.29c3d8dd.chunk.css.map",
     "static/js/2.964d37df.chunk.js.LICENSE.txt": "/beara_practice/static/js/2.964d37df.chunk.js.LICENSE.txt",
     "static/media/alex-black.jpg": "/beara_practice/static/media/alex-black.640d7e4f.jpg",
     "static/media/alex-hb-brn.jpg": "/beara_practice/static/media/alex-hb-brn.6b3ed139.jpg",
@@ -76,7 +76,7 @@
   "entrypoints": [
     "static/js/runtime-main.82687b91.js",
     "static/js/2.964d37df.chunk.js",
-    "static/css/main.ab7c5371.chunk.css",
-    "static/js/main.ace851b5.chunk.js"
+    "static/css/main.29c3d8dd.chunk.css",
+    "static/js/main.499fbebe.chunk.js"
   ]
 }
