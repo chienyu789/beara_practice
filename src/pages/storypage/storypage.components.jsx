@@ -8,7 +8,7 @@ import './storypage.styles.scss';
 const StoryPage = () => (
   <div className="story">
     <div className="video-container">
-      <iframe src="https://player.vimeo.com/video/133121883?title=0&byline=0&portrait=0&playsinline=0&autoplay=1&autopause=0&app_id=122963" width="640" height="360" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen="" title="our-story" data-ready="true"/>
+      <iframe src="https://player.vimeo.com/video/133121883?title=0&byline=0&portrait=0&playsinline=0&autoplay=1&autopause=0&app_id=122963" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen="" title="our-story" data-ready="true"/>
     </div>
     <div className="story-detail">
       <p>The story of our brand starts with a journey through Latin America. As a travel writer at the time, Jake Bullough was living in Bolivia, writing about people's lives whom he encountered. In La Paz, the capital of Bolivia, he met the wonderful Julia, who along with her extended family have been making and selling leather bags from a tiny shop in the back streets of the city for many years. Intrigued by the combination of incredible craftsmanship and quality materials, they began collaborating, turning Jake's designs into a collection of never seen before handbags.</p>

@@ -57,6 +57,9 @@ export const NavLogo = styled.div`
   align-items: center;
   margin:auto;
   justify-content: center;
+  @media (max-width:375px){
+    width:180px;
+  }
 `;
 
 export const Options = styled(Link)`
@@ -72,6 +75,10 @@ export const LogoIcon = styled(Link)`
   margin-left:20px;
   path{
     fill:white;
+  }
+  @media (max-width:375px){
+    width:100%;
+    margin-left:0px;
   }
 `;
 
@@ -115,14 +122,14 @@ export const HeaderIcon = styled.div`
   display: none;
   color: white;
   height: 70px;
-  width: 70px;
+  width: 40px;
   position: relative;
   margin: 18px 5px;
   span{
     display: inline-block;
     position: absolute;
     height: 3.5px;
-    width: 50%;
+    width: 90%;
     background: white;
     border-radius: 5px;
     opacity: 1;

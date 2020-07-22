@@ -38,7 +38,7 @@ const CategoryPage = ({ category }) => {
                 </div>
               ))
           }
-        </div>
+      </div>
     </div>
   );
 };

@@ -12,8 +12,10 @@ import './shanghai-store.styles.scss';
 
 const ShanghaiStore = () => (
   <div className='stores'>
-      <img src={Shanghai1} alt='shanghai'/>
-      <div className='storename'>Shanghai Store</div>
+      <div className='store'>
+        <img src={Shanghai1} alt='shanghai'/>
+        <div className='storename'>Shanghai Store</div>
+      </div>
       <div className='content'>
         Our Shanghai showroom is located on a quiet backstreet close to Nanjing Xi Lu the converted townhouse has a peaceful charm.
         We welcome everyone to call by, relax and have a closer look at our bags.

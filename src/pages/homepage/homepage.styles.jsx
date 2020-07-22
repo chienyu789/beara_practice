@@ -22,4 +22,13 @@ export const VideoContainer = styled.div`
   height:700px;
   display: flex;
   justify-content: center;
+  iframe{
+    zoom: 2.2;
+    @media (max-width:767px){
+        zoom: 1.3;
+    }
+    @media (max-width:360px){
+        zoom: 1.1;
+    }
+}
 `;

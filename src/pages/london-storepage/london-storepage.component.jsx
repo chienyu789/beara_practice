@@ -7,8 +7,10 @@ import './london-storepage.styles.scss';
 
 const LondonStore = () => (
   <div className='stores'>
-    <img src={London1} alt='london' />
-    <div className='storename'>London store</div>
+    <div className='store'>
+      <img src={London1} alt='london' />
+      <div className='storename'>London store</div>
+    </div>
     <div className='content'>
       <FormattedMessage id="store.london" />
       {/* London has been our home since the beginning and we now find ourselves in a critical time in regards the COVID-19 virus.

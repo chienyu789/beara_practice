@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 
 import DropDownBag from '../dropdownbags/dropdownbags.components';
 import DropDownStore from '../dropdownstore/dropdownstore.components';
+import SearchFilter from '../searchfilter/searchfilter.components';
 
 import { Options, Overlay, NavLanguage, Submenu } from './header.styles';
 
@@ -17,6 +18,7 @@ const Navbar = ({ languageSelect, HeaderToggle, style }) => (
     <Options to={process.env.PUBLIC_URL + '/category/all-products'} onClick={HeaderToggle}>
       <FormattedMessage id="header.bags" />
     </Options>
+    <SearchFilter />
     <Submenu onClick={HeaderToggle}>
       <DropDownBag />
     </Submenu>

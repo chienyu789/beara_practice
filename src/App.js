@@ -11,6 +11,7 @@ import LondonStore from './pages/london-storepage/london-storepage.component';
 import ShanghaiStore from './pages/shanghai-storepage/shanghai-storepage.component';
 import StoryPage from './pages/storypage/storypage.components';
 import CheckoutPage from './pages/checkout/checkout.components';
+import SearchPage from './pages/search/searchpage.components';
 
 import Header from './components/header/header.components';
 import Footer from './components/footer/footer.components';
@@ -37,6 +38,7 @@ function App(props) {
         <Route path={process.env.PUBLIC_URL + '/shanghai-store'} component={ShanghaiStore} />
         <Route path={process.env.PUBLIC_URL + '/our-story'} component={StoryPage} />
         <Route path={process.env.PUBLIC_URL + '/category'} component={ShopPage} />
+        <Route path={process.env.PUBLIC_URL + '/search'} component={SearchPage} />
       </div>
       <Route path={process.env.PUBLIC_URL + '/checkout'} component={CheckoutPage} />
       {
