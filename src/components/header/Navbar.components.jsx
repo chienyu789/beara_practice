@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 
 import DropDownBag from '../dropdownbags/dropdownbags.components';
 import DropDownStore from '../dropdownstore/dropdownstore.components';
-import SearchFilter from '../searchfilter/searchfilter.components';
+// import SearchFilter from '../searchfilter/searchfilter.components';
 
 import { Options, Overlay, NavLanguage, Submenu } from './header.styles';
 
@@ -18,8 +18,7 @@ const Navbar = ({ languageSelect, HeaderToggle, style }) => (
     <Options to={process.env.PUBLIC_URL + '/category/all-products'} onClick={HeaderToggle}>
       <FormattedMessage id="header.bags" />
     </Options>
-    <SearchFilter />
-    <Submenu onClick={HeaderToggle}>
+    <Submenu>
       <DropDownBag />
     </Submenu>
     <Options to={process.env.PUBLIC_URL + '/customise'} onClick={HeaderToggle}>
@@ -28,8 +27,8 @@ const Navbar = ({ languageSelect, HeaderToggle, style }) => (
     <Options to={process.env.PUBLIC_URL + '/london-store'} onClick={HeaderToggle}>
       <FormattedMessage id="header.stores" />
     </Options>
-    <Submenu onClick={HeaderToggle}>
-      <DropDownStore />
+    <Submenu>
+      <DropDownStore HeaderToggle={HeaderToggle} />
     </Submenu>
     <Options to={process.env.PUBLIC_URL + '/our-story'} onClick={HeaderToggle}>
       <FormattedMessage id="header.story" />

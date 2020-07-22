@@ -1,0 +1,27 @@
+.searchfilter{
+    width:100%;
+    top:100%;
+    .formser{
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        white-space:nowrap;
+    }
+    input[type='search']{
+        width:80%;
+        background-color: none;
+        border: 1px solid white;
+        color: white;
+        
+    }
+    input[type='button']{
+        width:10%;
+        background-color: none;
+        border: 1px solid white;
+        color: white;
+    }
+
+}

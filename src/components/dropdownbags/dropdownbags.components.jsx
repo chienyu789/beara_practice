@@ -6,11 +6,13 @@ import { createStructuredSelector } from 'reselect';
 import { selectDropdownBags } from '../../redux/dropdownbags/dropdownbags.selector';
 
 import DropdownList from '../dropdown-list/dropdown-list.components';
+import SearchFilter from '../searchfilter/searchfilter.components';
 
 import './dropdownbags.styles.scss';
 
 const DropDownBags = ({ bags }) => (
   <div className="bag">
+    <SearchFilter />
     {
     bags.map(({ id, subtitle, linkUrl }) => (
       <DropdownList key={id} subtitle={subtitle} linkUrl={linkUrl} />))

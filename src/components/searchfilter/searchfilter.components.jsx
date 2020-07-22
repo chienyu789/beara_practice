@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 
 import { selectCollectionForPreview } from '../../redux/shop/shop.selector';
+
+import './searchfilter.styles.scss';
 
 const SearchFilter = ({ collections, history }) => {
   const data = collections;
@@ -20,14 +22,24 @@ const SearchFilter = ({ collections, history }) => {
     const merged = [].concat(...list);
     setmatchState(merged);
   };
+
+  const firstRun = useRef(true);
+  useEffect(() => {
+    if (firstRun.current) {
+      firstRun.current = false;
+      return;
+    }
+    history.push(process.env.PUBLIC_URL + '/search?bag='+ searchState, { matchlist: matchState });
+  }, [matchState]);
+
   return (
-    <div>
+    <div className="searchfilter">
       <form>
-        <input type="text" name="bag" placeholder="Search..." onChange={searchHandler} />
+        <input type="search" name="bag" placeholder="Search..." onChange={searchHandler} />
         <input
           type="button"
           value="&#10132;"
-          onClick={() => { filterList(); history.push(process.env.PUBLIC_URL + '/search', { matchlist: matchState}); }}
+          onClick={() => filterList()}
         />
       </form>
     </div>
