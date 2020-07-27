@@ -10,12 +10,12 @@ import SearchFilter from '../searchfilter/searchfilter.components';
 
 import './dropdownbags.styles.scss';
 
-const DropDownBags = ({ bags }) => (
+const DropDownBags = ({ bags, HeaderToggle }) => (
   <div className="bag">
-    <SearchFilter />
+    <SearchFilter HeaderToggle={HeaderToggle} />
     {
     bags.map(({ id, subtitle, linkUrl }) => (
-      <DropdownList key={id} subtitle={subtitle} linkUrl={linkUrl} />))
+      <DropdownList key={id} subtitle={subtitle} linkUrl={linkUrl} HeaderToggle={HeaderToggle} />))
     }
   </div>
 );
@@ -33,6 +33,11 @@ const bag = PropTypes.shape({
 
 DropDownBags.propTypes = {
   bags: PropTypes.arrayOf(bag).isRequired,
+  HeaderToggle: PropTypes.func,
+};
+
+DropDownBags.defaultProps = {
+  HeaderToggle: undefined,
 };
 
 export default connect(mapStateToProps)(DropDownBags);

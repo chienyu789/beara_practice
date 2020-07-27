@@ -11,50 +11,64 @@ import Shanghai7 from '../../assets/shanghai7.jpg';
 import './shanghai-store.styles.scss';
 
 const ShanghaiStore = () => (
-  <div className='stores'>
-      <div className='store'>
-        <img src={Shanghai1} alt='shanghai'/>
-        <div className='storename'>Shanghai Store</div>
+  <div className="stores">
+    <div className="store">
+      <img src={Shanghai1} alt="shanghai" />
+      <div className="storename">Shanghai Store</div>
+    </div>
+    <div className="content">
+      Our Shanghai showroom is located on a quiet backstreet close to Nanjing Xi Lu
+      the converted townhouse has a peaceful charm.
+      We welcome everyone to call by, relax and have a closer look at our bags.
+    </div>
+    <div className="detail">
+      <div className="box">
+        OPENING HOURS
+        <br />
+        —
+        <br />
+        Monday to Thursday 10:30am - 7:30pm
+        <br />
+        Friday to Sunday 11:00am - 8:00pm
+        <br />
       </div>
-      <div className='content'>
-        Our Shanghai showroom is located on a quiet backstreet close to Nanjing Xi Lu the converted townhouse has a peaceful charm.
-        We welcome everyone to call by, relax and have a closer look at our bags.
+      <div className="box">
+        <img src={Shanghai2} alt="shanghai2" />
       </div>
-    <div className='detail'>
-      <div className='box'>
-        OPENING HOURS<br/>
-        —<br/>
-        Monday to Thursday 10:30am - 7:30pm<br/>
-        Friday to Sunday 11:00am - 8:00pm<br/>
+      <div className="box">
+        <img src={Shanghai3} alt="shanghai3" />
       </div>
-      <div className='box'>
-        <img src={Shanghai2} alt='shanghai2'/>
+      <div className="box">
+        ADDRESS
+        <br />
+        —
+        <br />
+        No.4 Front Door
+        <br />
+        227 TaiXing Road
+        <br />
+        Jing'an District
+        <br />
+        Shanghai, China
+        <br />
+        +86 18017436529
+        <br />
+        storesh@bearabeara.co.uk
+        <br />
+        GET DIRECTION
+        <br />
       </div>
-      <div className='box'>
-        <img src={Shanghai3} alt='shanghai3'/>
+      <div className="box">
+        <img src={Shanghai4} alt="shanghai4" />
       </div>
-      <div className='box'>
-        ADDRESS<br/>
-        —<br/>
-        No.4 Front Door<br/>
-        227 TaiXing Road<br/>
-        Jing'an District<br/>
-        Shanghai, China<br/>
-        +86 18017436529<br/>
-        storesh@bearabeara.co.uk<br/>
-        GET DIRECTION<br/>
+      <div className="box">
+        <img src={Shanghai5} alt="shanghai5" />
       </div>
-      <div className='box'>
-        <img src={Shanghai4} alt='shanghai4'/>
+      <div className="box">
+        <img src={Shanghai6} alt="shanghai6" />
       </div>
-      <div className='box'>
-        <img src={Shanghai5} alt='shanghai5'/> 
-      </div>
-      <div className='box'>
-        <img src={Shanghai6} alt='shanghai6'/>
-      </div>
-      <div className='box'>
-        <img src={Shanghai7} alt='shanghai7'/>
+      <div className="box">
+        <img src={Shanghai7} alt="shanghai7" />
       </div>
     </div>
   </div>

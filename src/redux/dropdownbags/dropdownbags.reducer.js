@@ -18,8 +18,8 @@ const INITIAL_STATE = {
     {
       id: 3,
       title: 'BAGS',
-      subtitle: <FormattedMessage id="drop.stachels" />,
-      linkUrl: '/category/stachels',
+      subtitle: <FormattedMessage id="drop.satchels" />,
+      linkUrl: '/category/satchels',
     },
     {
       id: 4,

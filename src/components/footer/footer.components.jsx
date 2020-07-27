@@ -36,7 +36,7 @@ const Footer = () => (
         <form className="newsmail">
           <span>JOIN OUR NEWSLETTER</span>
           <input type="email" placeholder="Email" required />
-          <input type="submit" value="SIGN UP" />
+          <input type="button" value="SIGN UP" />
         </form>
         <div className="social-media">
           <Link to="/">

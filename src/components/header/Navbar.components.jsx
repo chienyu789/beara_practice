@@ -19,7 +19,7 @@ const Navbar = ({ languageSelect, HeaderToggle, style }) => (
       <FormattedMessage id="header.bags" />
     </Options>
     <Submenu>
-      <DropDownBag />
+      <DropDownBag HeaderToggle={HeaderToggle} />
     </Submenu>
     <Options to={process.env.PUBLIC_URL + '/customise'} onClick={HeaderToggle}>
       <FormattedMessage id="header.customise" />
@@ -27,8 +27,8 @@ const Navbar = ({ languageSelect, HeaderToggle, style }) => (
     <Options to={process.env.PUBLIC_URL + '/london-store'} onClick={HeaderToggle}>
       <FormattedMessage id="header.stores" />
     </Options>
-    <Submenu>
-      <DropDownStore HeaderToggle={HeaderToggle} />
+    <Submenu onClick={HeaderToggle}>
+      <DropDownStore />
     </Submenu>
     <Options to={process.env.PUBLIC_URL + '/our-story'} onClick={HeaderToggle}>
       <FormattedMessage id="header.story" />

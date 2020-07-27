@@ -55,10 +55,10 @@ const SHOP_DATA = {
       },
     ],
   },
-  stachels: {
+  satchels: {
     id: 2,
-    title: 'STACHELS',
-    routeName: 'stachels',
+    title: 'SATCHELS',
+    routeName: 'satchels',
     videoUrl: 'https://player.vimeo.com/video/369045160?background=1&autoplay=1&loop=1&byline=0&title=0',
     items: [
       {
@@ -66,7 +66,7 @@ const SHOP_DATA = {
         title: 'will-satchel-s',
         name: 'WILL SATCHEL SMALL',
         imgUrl: require('../../assets/will-satchel-s.jpg'), // eslint-disable-line global-require
-        linkUrl: '/category/stachels/will-satchel-s',
+        linkUrl: '/category/satchels/will-satchel-s',
         price: 180,
       },
       {
@@ -74,7 +74,7 @@ const SHOP_DATA = {
         title: 'will-satchel-m',
         name: 'WILL SATCHEL MEDIUM',
         imgUrl: require('../../assets/will-satchel-m.jpg'), // eslint-disable-line global-require
-        linkUrl: '/category/stachels/will-satchel-m',
+        linkUrl: '/category/satchels/will-satchel-m',
         price: 220,
       },
       {
@@ -82,7 +82,7 @@ const SHOP_DATA = {
         title: 'will-satchel-l',
         name: 'WILL SATCHEL LARGE',
         imgUrl: require('../../assets/will-satchel-l.jpg'), // eslint-disable-line global-require
-        linkUrl: '/category/stachels/will-satchel-l',
+        linkUrl: '/category/satchels/will-satchel-l',
         price: 280,
       },
       {
@@ -90,7 +90,7 @@ const SHOP_DATA = {
         title: 'santa-anna-xs',
         name: 'SANTA ANNA EXTRA SMALL',
         imgUrl: require('../../assets/santa-anna-xs.jpg'), // eslint-disable-line global-require
-        linkUrl: '/category/stachels/santa-anna-xs',
+        linkUrl: '/category/satchels/santa-anna-xs',
         price: 145,
       },
       {
@@ -98,7 +98,7 @@ const SHOP_DATA = {
         title: 'santa-anna-s',
         name: 'SANTA ANNA SMALL',
         imgUrl: require('../../assets/santa-anna-s.jpg'), // eslint-disable-line global-require
-        linkUrl: '/category/stachels/santa-anna-s',
+        linkUrl: '/category/satchels/santa-anna-s',
         price: 155,
       },
       {
@@ -106,7 +106,7 @@ const SHOP_DATA = {
         title: 'santa-anna-m',
         name: 'SANTA ANNA MEDIUM',
         imgUrl: require('../../assets/santa-anna-m.jpg'), // eslint-disable-line global-require
-        linkUrl: '/category/stachels/santa-anna-m',
+        linkUrl: '/category/satchels/santa-anna-m',
         price: 165,
       },
     ],

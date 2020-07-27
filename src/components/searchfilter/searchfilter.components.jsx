@@ -8,7 +8,7 @@ import { selectCollectionForPreview } from '../../redux/shop/shop.selector';
 
 import './searchfilter.styles.scss';
 
-const SearchFilter = ({ collections, history }) => {
+const SearchFilter = ({ collections, history, HeaderToggle }) => {
   const data = collections;
   const [searchState, setsearchState] = useState('');
   const [matchState, setmatchState] = useState('');
@@ -23,19 +23,28 @@ const SearchFilter = ({ collections, history }) => {
     setmatchState(merged);
   };
 
+  const keyHandler = (e) => {
+    if (e.keyCode === 13) {
+      filterList();
+    }
+  };
+
   const firstRun = useRef(true);
   useEffect(() => {
     if (firstRun.current) {
       firstRun.current = false;
       return;
     }
-    history.push(process.env.PUBLIC_URL + '/search?bag='+ searchState, { matchlist: matchState });
+    history.push(process.env.PUBLIC_URL + '/search?bag=' + searchState, { matchlist: matchState });
+    if (HeaderToggle) {
+      HeaderToggle();
+    }
   }, [matchState]);
 
   return (
     <div className="searchfilter">
-      <form>
-        <input type="search" name="bag" placeholder="Search..." onChange={searchHandler} />
+      <form className="formser">
+        <input type="text" name="bag" placeholder="Search..." onChange={searchHandler} onKeyDown={keyHandler} />
         <input
           type="button"
           value="&#10132;"
@@ -65,6 +74,7 @@ const category = PropTypes.shape({
 
 SearchFilter.propTypes = {
   collections: PropTypes.arrayOf(category),
+  HeaderToggle: PropTypes.func,
 };
 
 SearchFilter.defaultProps = {

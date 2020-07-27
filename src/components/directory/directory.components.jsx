@@ -25,9 +25,9 @@ class Directory extends React.Component {
         },
         {
           id: 3,
-          title: 'stachels',
+          title: 'satchels',
           imgUrl: require('../../assets/stachels.jpg'), // eslint-disable-line global-require
-          linkUrl: 'category/stachels',
+          linkUrl: 'category/satchels',
         },
       ],
     };

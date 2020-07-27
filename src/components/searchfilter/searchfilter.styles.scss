@@ -1,25 +1,38 @@
 .searchfilter{
     width:100%;
     top:100%;
+    padding:20px 0px 20px 0px;
+    background-color: rgba(0,0,0,0.5);
+    @media (max-width:768px){
+        padding:0;
+        text-align:left;
+        background-color:rgba(0,0,0,0);
+      }
     .formser{
         height: 100%;
         align-items: center;
         justify-content: center;
-        color: white;
         text-decoration: none;
         font-size: 20px;
         white-space:nowrap;
+        display: inline-flex;
     }
-    input[type='search']{
+    input[type="text"]{
         width:80%;
-        background-color: none;
+        font-size: 20px;
+        background-color: rgba(0,0,0,0);
         border: 1px solid white;
+        outline: none;
         color: white;
-        
+
     }
-    input[type='button']{
+    input::placeholder{
+        color: white;
+    }
+    input[type="button"]{
         width:10%;
-        background-color: none;
+        font-size: 20px;
+        background-color: rgba(0,0,0,0);
         border: 1px solid white;
         color: white;
     }

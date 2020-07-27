@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 // import './dropdown-list.styles.scss';
 import { Nav, NavLink } from './dropdown-list.styles';
 
-const DropdownList = ({ id, subtitle, linkUrl }) => (
-  <Nav>
+const DropdownList = ({ id, subtitle, linkUrl, HeaderToggle }) => (
+  <Nav onClick={HeaderToggle}>
     <NavLink to={process.env.PUBLIC_URL + linkUrl} key={id}>
       { subtitle }
     </NavLink>
@@ -15,8 +15,9 @@ const DropdownList = ({ id, subtitle, linkUrl }) => (
 
 DropdownList.propTypes = {
   id: PropTypes.number,
-  subtitle: PropTypes.object.isRequired,
+  subtitle: PropTypes.element.isRequired,
   linkUrl: PropTypes.string.isRequired,
+  HeaderToggle: PropTypes.func,
 };
 
 DropdownList.defaultProps = {
