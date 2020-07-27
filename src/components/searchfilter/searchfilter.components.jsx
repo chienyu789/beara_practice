@@ -21,11 +21,12 @@ const SearchFilter = ({ collections, history, HeaderToggle }) => {
     const list = data.map((category) => category.items.filter((item) => item.name.includes(searchState.toUpperCase())));
     const merged = [].concat(...list);
     setmatchState(merged);
+    console.log('execute');
   };
 
   const keyHandler = (e) => {
-    e.preventDefault();
     if (e.keyCode === 13) {
+      e.preventDefault();
       filterList();
     }
   };
