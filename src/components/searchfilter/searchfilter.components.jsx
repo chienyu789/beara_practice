@@ -24,6 +24,7 @@ const SearchFilter = ({ collections, history, HeaderToggle }) => {
   };
 
   const keyHandler = (e) => {
+    e.preventDefault();
     if (e.keyCode === 13) {
       filterList();
     }
