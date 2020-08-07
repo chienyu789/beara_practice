@@ -25,12 +25,12 @@ const Footer = () => (
     <div className="footer-detail">
       <div className="aboutus">
         <span>ABOUT US</span>
-        <Link className="link" to={process.env.PUBLIC_URL + '/our-story'}>Our Story</Link>
-        <Link className="link" to={process.env.PUBLIC_URL + '/craftsmanship'}>Craftsmanship</Link>
-        <Link className="link" to={process.env.PUBLIC_URL + '/customise'}>Personalising Your Bag</Link>
-        <Link className="link" to={process.env.PUBLIC_URL + '/london-store'}>London Store</Link>
-        <Link className="link" to={process.env.PUBLIC_URL + '/shanghai-store'}>Shanghai Store</Link>
-        <Link className="link" to={process.env.PUBLIC_URL + '/blog'}>Blog</Link>
+        <Link className="link" to={`${process.env.PUBLIC_URL}/our-story`}>Our Story</Link>
+        <Link className="link" to={`${process.env.PUBLIC_URL}/craftsmanship`}>Craftsmanship</Link>
+        <Link className="link" to={`${process.env.PUBLIC_URL}/customise`}>Personalising Your Bag</Link>
+        <Link className="link" to={`${process.env.PUBLIC_URL}/london-store`}>London Store</Link>
+        <Link className="link" to={`${process.env.PUBLIC_URL}/shanghai-store`}>Shanghai Store</Link>
+        <Link className="link" to={`${process.env.PUBLIC_URL}/blog`}>Blog</Link>
       </div>
       <div className="news">
         <form className="newsmail">
@@ -60,6 +60,7 @@ const Footer = () => (
             </div>
           </Link>
         </div>
+        <span>I do not own the copyright of the website, I made it only for practice programming.</span>
       </div>
       <div className="aboutus">
         <span>CUSTOMER SERVICE</span>

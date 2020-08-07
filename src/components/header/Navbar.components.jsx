@@ -4,9 +4,10 @@ import { FormattedMessage } from 'react-intl';
 
 import DropDownBag from '../dropdownbags/dropdownbags.components';
 import DropDownStore from '../dropdownstore/dropdownstore.components';
-// import SearchFilter from '../searchfilter/searchfilter.components';
 
-import { Options, Overlay, NavLanguage, Submenu } from './header.styles';
+import {
+  Options, Overlay, NavLanguage, Submenu,
+} from './header.styles';
 
 const Navbar = ({ languageSelect, HeaderToggle, style }) => (
   <Overlay style={style}>
@@ -15,22 +16,22 @@ const Navbar = ({ languageSelect, HeaderToggle, style }) => (
       <span>|</span>
       <button type="button" onClick={() => languageSelect('zh')}>中國</button>
     </NavLanguage>
-    <Options to={process.env.PUBLIC_URL + '/category/all-products'} onClick={HeaderToggle}>
+    <Options to={`${process.env.PUBLIC_URL}/category/all-products`} onClick={HeaderToggle}>
       <FormattedMessage id="header.bags" />
     </Options>
     <Submenu>
       <DropDownBag HeaderToggle={HeaderToggle} />
     </Submenu>
-    <Options to={process.env.PUBLIC_URL + '/customise'} onClick={HeaderToggle}>
+    <Options to={`${process.env.PUBLIC_URL}/customise`} onClick={HeaderToggle}>
       <FormattedMessage id="header.customise" />
     </Options>
-    <Options to={process.env.PUBLIC_URL + '/london-store'} onClick={HeaderToggle}>
+    <Options to={`${process.env.PUBLIC_URL}/london-store`} onClick={HeaderToggle}>
       <FormattedMessage id="header.stores" />
     </Options>
     <Submenu onClick={HeaderToggle}>
       <DropDownStore />
     </Submenu>
-    <Options to={process.env.PUBLIC_URL + '/our-story'} onClick={HeaderToggle}>
+    <Options to={`${process.env.PUBLIC_URL}/our-story`} onClick={HeaderToggle}>
       <FormattedMessage id="header.story" />
     </Options>
   </Overlay>

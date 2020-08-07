@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 
-import { Product, Image, Content, Remove } from './cart-product.styles';
+import {
+  Product, Image, Content, Remove,
+} from './cart-product.styles';
 import { removeProduct } from '../../redux/cart/cart.actions';
 
 const CartProduct = ({ cartProduct, removeProductFromCart }) => {

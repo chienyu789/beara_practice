@@ -18,10 +18,11 @@ const SearchFilter = ({ collections, history, HeaderToggle }) => {
   };
 
   const filterList = () => {
-    const list = data.map((category) => category.items.filter((item) => item.name.includes(searchState.toUpperCase())));
+    const list = data.map(
+      (category) => category.items.filter((item) => item.name.includes(searchState.toUpperCase())),
+    );
     const merged = [].concat(...list);
     setmatchState(merged);
-    console.log('execute');
   };
 
   const keyHandler = (e) => {
@@ -37,7 +38,7 @@ const SearchFilter = ({ collections, history, HeaderToggle }) => {
       firstRun.current = false;
       return;
     }
-    history.push(process.env.PUBLIC_URL + '/search?bag=' + searchState, { matchlist: matchState });
+    history.push(`${process.env.PUBLIC_URL}/search?bag=${searchState}`, { matchlist: matchState });
     if (HeaderToggle) {
       HeaderToggle();
     }
@@ -77,10 +78,14 @@ const category = PropTypes.shape({
 SearchFilter.propTypes = {
   collections: PropTypes.arrayOf(category),
   HeaderToggle: PropTypes.func,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
 SearchFilter.defaultProps = {
   collections: undefined,
+  HeaderToggle: undefined,
 };
 
 const mapStateToProps = createStructuredSelector({

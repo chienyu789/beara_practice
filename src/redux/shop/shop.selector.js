@@ -19,12 +19,12 @@ export const selectCollections = createSelector(
 
 export const selectCollectionForPreview = createSelector(
   [selectCollections],
-  (collections) => Object.keys(collections).map((key) => collections[key]),
+  (collections) => collections ? Object.keys(collections).map((key) => collections[key]) : [],
 );
 
 export const selectCategory = (categoryUrlParams) => createSelector(
   [selectCollections],
-  (collections) => collections[categoryUrlParams],
+  (collections) => (collections ? collections[categoryUrlParams] : null),
 );
 
 export const selectProduct = (categoryUrlParams, productUrlParams) => createSelector(

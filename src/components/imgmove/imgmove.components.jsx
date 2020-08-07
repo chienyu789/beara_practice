@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './imgmove.styles.scss';
-import { Move, Image, Overlay, Title, Subtitle } from './imgmove.styles';
+import {
+  Move, Image, Overlay, Title, Subtitle,
+} from './imgmove.styles';
 
 const ImgMove = ({
   title, subtitle, imgUrl, x, y, active,

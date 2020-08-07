@@ -5,7 +5,9 @@ import Blogcategory from '../../components/blogcategory/blogcategory.components'
 import HomeBack from '../../components/homepage-back/homepage-back.components';
 
 import './homepage.styles.scss';
-import { BackgroundContainer, DirectoryContainer, BlogContainer, VideoContainer } from './homepage.styles';
+import {
+  BackgroundContainer, DirectoryContainer, BlogContainer, VideoContainer,
+} from './homepage.styles';
 import SummerSales from '../../assets/summersale.jpg';
 import OurStory from '../../assets/ourstory.jpg';
 

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import DISCOUNT_CODE from './discount.data';
 
 import './discount-code.styles.scss';
-// import { Input, Apply } from './discount-code.styles';
 
 const DiscountCode = ({ getDiscount }) => {
   const [codeState, setcodeState] = useState('');

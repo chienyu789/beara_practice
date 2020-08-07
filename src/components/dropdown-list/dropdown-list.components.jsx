@@ -5,7 +5,9 @@ import PropTypes from 'prop-types';
 // import './dropdown-list.styles.scss';
 import { Nav, NavLink } from './dropdown-list.styles';
 
-const DropdownList = ({ id, subtitle, linkUrl, HeaderToggle }) => (
+const DropdownList = ({
+  id, subtitle, linkUrl, HeaderToggle,
+}) => (
   <Nav onClick={HeaderToggle}>
     <NavLink to={process.env.PUBLIC_URL + linkUrl} key={id}>
       { subtitle }
@@ -22,6 +24,7 @@ DropdownList.propTypes = {
 
 DropdownList.defaultProps = {
   id: 0,
+  HeaderToggle: undefined,
 };
 
 export default DropdownList;

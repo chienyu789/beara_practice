@@ -71,7 +71,7 @@ const Header = ({ hidden, count, languageSelect }) => {
         <Nav>
           <NavList>
             <Dropdown onMouseOver={ShowBagbar} onMouseLeave={HideBagbar}>
-              <Options to={process.env.PUBLIC_URL + '/category/all-products'}>
+              <Options to={`${process.env.PUBLIC_URL}/category/all-products`}>
                 <FormattedMessage id="header.bags" />
               </Options>
               {
@@ -82,18 +82,18 @@ const Header = ({ hidden, count, languageSelect }) => {
             </Dropdown>
           </NavList>
           <NavList>
-            <Options to={process.env.PUBLIC_URL + '/customise'}>
+            <Options to={`${process.env.PUBLIC_URL}/customise`}>
               <FormattedMessage id="header.customise" />
             </Options>
           </NavList>
           <NavLogo>
-            <LogoIcon to={process.env.PUBLIC_URL + '/'}>
+            <LogoIcon to={`${process.env.PUBLIC_URL}/`}>
               <Logo />
             </LogoIcon>
           </NavLogo>
           <NavList>
             <Dropdown onMouseOver={ShowNavbar} onMouseLeave={HideNavbar}>
-              <Options to={process.env.PUBLIC_URL + '/london-store'}>
+              <Options to={`${process.env.PUBLIC_URL}/london-store`}>
                 <FormattedMessage id="header.stores" />
               </Options>
               {
@@ -104,7 +104,7 @@ const Header = ({ hidden, count, languageSelect }) => {
             </Dropdown>
           </NavList>
           <NavList>
-            <Options to={process.env.PUBLIC_URL + '/our-story'}>
+            <Options to={`${process.env.PUBLIC_URL}/our-story`}>
               <FormattedMessage id="header.story" />
             </Options>
           </NavList>

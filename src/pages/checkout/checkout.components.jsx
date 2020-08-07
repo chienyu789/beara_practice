@@ -12,8 +12,8 @@ import './checkout.styles.scss';
 const CheckoutPage = ({ cartProducts, total, history }) => {
   const [stepState, setstepState] = useState({ currentStep: 1 });
   const discountState = history.location.state.productdiscount;
-  const discountmessage = history.location.state.discountmessage;
-  const producttotal = discountState ? (total * discountState).toFixed(2) : total;
+  const discountmessage = history.location.state.message;
+  const producttotal = discountState !== 0 ? (total * discountState).toFixed(2) : total;
   const handleStep = (event) => {
     event.preventDefault();
     setstepState({ currentStep: stepState.currentStep + 1 });
@@ -117,6 +117,25 @@ const cartProduct = PropTypes.shape({
 CheckoutPage.propTypes = {
   cartProducts: PropTypes.arrayOf(cartProduct).isRequired,
   total: PropTypes.number.isRequired,
+  history: PropTypes.shape({
+    location: PropTypes.shape({
+      state: PropTypes.shape({
+        productdiscount: PropTypes.number,
+        message: PropTypes.string,
+      }),
+    }),
+  }),
+};
+
+CheckoutPage.defaultProps = {
+  history: {
+    location: {
+      state: {
+        productdiscount: 0,
+        message: '',
+      },
+    },
+  },
 };
 
 export default connect(mapStateToProps)(CheckoutPage);
