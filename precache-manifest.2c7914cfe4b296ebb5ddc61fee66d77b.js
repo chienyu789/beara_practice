@@ -1,35 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ac66628e435ee6f1a1eca6425be34d32",
+    "revision": "08529e85a918e23baf5da339ffb57196",
     "url": "/beara_practice/index.html"
   },
   {
-    "revision": "f545219876c466c95ebf",
+    "revision": "6c9e3a60398dfe1dcdaa",
     "url": "/beara_practice/static/css/main.bc96e1fd.chunk.css"
   },
   {
-    "revision": "1a4985217415c9cc73b0",
-    "url": "/beara_practice/static/js/2.e0f725cd.chunk.js"
+    "revision": "b75ac997dd7c82d6ab44",
+    "url": "/beara_practice/static/js/2.242902d5.chunk.js"
   },
   {
-    "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/beara_practice/static/js/2.e0f725cd.chunk.js.LICENSE.txt"
+    "revision": "d0b13a04dd0dc4c851ad16fad1cc6f51",
+    "url": "/beara_practice/static/js/2.242902d5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f545219876c466c95ebf",
-    "url": "/beara_practice/static/js/main.e46b58f8.chunk.js"
+    "revision": "6c9e3a60398dfe1dcdaa",
+    "url": "/beara_practice/static/js/main.9b447ef6.chunk.js"
   },
   {
     "revision": "f480daa7a268c9f81792",
     "url": "/beara_practice/static/js/runtime-main.82687b91.js"
-  },
-  {
-    "revision": "640d7e4feb41f0f5db04a84cd1eca394",
-    "url": "/beara_practice/static/media/alex-black.640d7e4f.jpg"
-  },
-  {
-    "revision": "6b3ed1395ff39af5a846832cf3228fbe",
-    "url": "/beara_practice/static/media/alex-hb-brn.6b3ed139.jpg"
   },
   {
     "revision": "e935cb1f0dd1ce527dd09c488b734802",
@@ -108,20 +100,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/beara_practice/static/media/customise9-9.b55debc3.jpg"
   },
   {
-    "revision": "6d70f04e4f0a3cdf627189662522b1d1",
-    "url": "/beara_practice/static/media/eva-black.6d70f04e.jpg"
-  },
-  {
-    "revision": "3256d5203b632823f8ad202c91089579",
-    "url": "/beara_practice/static/media/eva-brown.3256d520.jpg"
-  },
-  {
     "revision": "0587f70c98d05d35833d892558712ade",
     "url": "/beara_practice/static/media/facebook.0587f70c.svg"
-  },
-  {
-    "revision": "e37cb6104627e3d175819b2ac4ef3e0f",
-    "url": "/beara_practice/static/media/frida-bp.e37cb610.jpg"
   },
   {
     "revision": "d04e7965cbebd02d10112d74df459875",
@@ -142,10 +122,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "60b0488547159a0e701cf0edaedeacf8",
     "url": "/beara_practice/static/media/instagram.60b04885.svg"
-  },
-  {
-    "revision": "9fa778638a3984793ade9afda5d6fd30",
-    "url": "/beara_practice/static/media/lila.9fa77863.jpg"
   },
   {
     "revision": "0e5d269f463ee42c8c199e46e37178b7",
@@ -182,18 +158,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "77d9ab1900762d55b2074d83896ea81f",
     "url": "/beara_practice/static/media/pinterest.77d9ab19.svg"
-  },
-  {
-    "revision": "2fcd74559188f8209eb406c6784962b7",
-    "url": "/beara_practice/static/media/santa-anna-m.2fcd7455.jpg"
-  },
-  {
-    "revision": "34f5b67a1c08b3206c3fb1fd3914026a",
-    "url": "/beara_practice/static/media/santa-anna-s.34f5b67a.jpg"
-  },
-  {
-    "revision": "ab4627555835214c1e5ad4da7fb9a1f2",
-    "url": "/beara_practice/static/media/santa-anna-xs.ab462755.jpg"
   },
   {
     "revision": "79670803d353bda24c8a43b3ed9a674c",
@@ -240,27 +204,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/beara_practice/static/media/white-penny.b960e519.gif"
   },
   {
-    "revision": "13b982797116727c66770a18b6b7efd4",
-    "url": "/beara_practice/static/media/will-satchel-l.13b98279.jpg"
-  },
-  {
-    "revision": "6bbbbeb70c70e7130e32a88b6ae1e0cf",
-    "url": "/beara_practice/static/media/will-satchel-m.6bbbbeb7.jpg"
-  },
-  {
-    "revision": "ba692daf62c903077246a47445677f85",
-    "url": "/beara_practice/static/media/will-satchel-s.ba692daf.jpg"
-  },
-  {
     "revision": "33b52a48930f0fb8ca61cb1ce4fc876e",
     "url": "/beara_practice/static/media/wrapping-paper.33b52a48.jpg"
-  },
-  {
-    "revision": "9dabd21214407232025bc8d81eb8ca17",
-    "url": "/beara_practice/static/media/yoyo-black.9dabd212.jpg"
-  },
-  {
-    "revision": "7e74cc7f7de3b7b2ff94b81b5f94aa95",
-    "url": "/beara_practice/static/media/yoyo-brown.7e74cc7f.jpg"
   }
 ]);
