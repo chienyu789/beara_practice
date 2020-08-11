@@ -13,7 +13,7 @@ const CollectionPage = ({ collections }) => (
       collections.map(({ items }) => items.map((item) => (
         <div key={item.id} className="collectionitem">
           <Link to={process.env.PUBLIC_URL + item.linkUrl}>
-            <img src={item.imgUrl} alt={item.name} />
+            <img src={process.env.PUBLIC_URL + item.imgUrl} alt={item.name} />
           </Link>
           <span>{item.name}</span>
           <span>
