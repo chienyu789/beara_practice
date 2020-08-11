@@ -18,38 +18,28 @@ const CollectionPageWithSpinner = WithSpinner(CollectionPage);
 const CategoryWithSpinner = WithSpinner(Category);
 
 class ShopPage extends React.Component {
-  constructor() {
-    super();
-
-    this.state = { loading: true };
+  state = {
+    loading: true
   }
-
   componentDidMount() {
     const { updateCollections } = this.props;
-    const collectionsMap = SnapshotToObject();
-    updateCollections(collectionsMap);
-    this.setState({ loading: false });
-    console.log('working');
+    SnapshotToObject().then((collectionsMap) => {
+      updateCollections(collectionsMap);
+      this.setState({ loading: false});//update state after updateCollections
+    });
   }
 
-  // const [loading, setloading] = useState(true);
-  // useEffect(() => {
-  //   const collectionsMap = SnapshotToObject();
-  //   updateCollections(collectionsMap);
-  //   setloading(false);
-  // });
-  render() {
+  render(){
     const { match } = this.props;
     const { loading } = this.state;
-    console.log(loading);
     return (
       <div className="products">
-        <Route exact path={`${match.path}/all-products`} render={(props) => (<CollectionPageWithSpinner isLoading={loading} {...props} />)} />
-        <Route path={`${match.path}/:categoryId`} component={Category} />
+        <Route exact path={`${match.path}/all-products`} render={(props) => <CollectionPageWithSpinner isLoading={loading} {...props} />} />
+        <Route path={`${match.path}/:categoryId`} render={(props) => <CategoryWithSpinner isLoading={loading} {...props} />} />
       </div>
-    );
+    )
   }
-}
+};
 
 ShopPage.propTypes = {
   match: PropTypes.shape({

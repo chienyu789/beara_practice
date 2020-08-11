@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Route, withRouter } from 'react-router-dom';
 
 import { hideCart } from './redux/cart/cart.actions';
-import { updateCollections } from './redux/shop/shop.action';
-import { firestore,SnapshotToObject } from './firebase/firebase.utils';
 
 import HomePage from './pages/homepage/homepage.components';
 import ShopPage from './pages/shoppage/shoppage.components';
@@ -22,13 +20,6 @@ import ScrollToTop from './components/scroll-to-top/scroll-to-top.components';
 import './App.css';
 
 function App(props) {
-  const [loading, setloading] = useState(true);
-  useEffect(() => {
-    const collectionsMap = SnapshotToObject();
-    updateCollections(collectionsMap);
-    setloading(false);
-    console.log(SnapshotToObject());
-  });
   return (
     <div className="App">
       <ScrollToTop />
@@ -61,7 +52,6 @@ const mapStateToProps = (state) => ({
 });
 const mapDispatchToProps = (dispatch) => ({
   hideCartNav: () => dispatch(hideCart()),
-  updateCollections: (collectionsMap) => dispatch(updateCollections(collectionsMap)),
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
